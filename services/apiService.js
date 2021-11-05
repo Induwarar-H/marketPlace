@@ -73,7 +73,6 @@ export const callApi = async(apiObject) => {
                         return;
                     }
                     result = await renewTokenHandler(apiObject);
-
                 } else if (error.response.status === 403) {
                     result = await {
                         success: false,
