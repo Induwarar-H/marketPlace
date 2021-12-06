@@ -13,6 +13,6 @@ module.exports = withPWA({
 
     },
 
-    cssModules: true
-
+    cssModules: true,
+    distDir: 'build',
 });

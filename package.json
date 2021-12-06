@@ -1,11 +1,11 @@
 {
-	"name": "edemy",
+	"name": "Edulab-MarketPlace",
 	"version": "1.4.0",
-	"description": "eDemy - React Next.js Education LMS Template",
+	"description": "Edulab MarketPlace",
 	"main": "index.js",
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "next build && next export",
 		"start": "next start -p 3040"
 	},
 	"author": "EnvyTheme.com",

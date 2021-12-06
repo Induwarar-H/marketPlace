@@ -69,132 +69,132 @@ const Navbar = ({ user }) => {
                                         </Link>
                                     </li>
 
-                                    <li className="nav-item">
-                                        <Link href="/">
-                                            <a onClick={e => e.preventDefault()} className="nav-link">
-                                                Pages <i className='bx bx-chevron-down'></i>
-                                            </a>
-                                        </Link>
+                                    {/*<li className="nav-item">*/}
+                                    {/*    <Link href="/">*/}
+                                    {/*        <a onClick={e => e.preventDefault()} className="nav-link">*/}
+                                    {/*            Pages <i className='bx bx-chevron-down'></i>*/}
+                                    {/*        </a>*/}
+                                    {/*    </Link>*/}
 
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <Link href="/">
-                                                    <a onClick={e => e.preventDefault()} className="nav-link">
-                                                        About Us <i className='bx bx-chevron-down'></i>
-                                                    </a>
-                                                </Link>
+                                    {/*    <ul className="dropdown-menu">*/}
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/">*/}
+                                    {/*                <a onClick={e => e.preventDefault()} className="nav-link">*/}
+                                    {/*                    About Us <i className='bx bx-chevron-down'></i>*/}
+                                    {/*                </a>*/}
+                                    {/*            </Link>*/}
 
-                                                <ul className="dropdown-menu">
-                                                    <li className="nav-item">
-                                                        <Link href="/about-1" activeClassName="active">
-                                                            <a onClick={toggleNavbar} className="nav-link">About Us 01</a>
-                                                        </Link>
-                                                    </li>
+                                    {/*            <ul className="dropdown-menu">*/}
+                                    {/*                <li className="nav-item">*/}
+                                    {/*                    <Link href="/about-1" activeClassName="active">*/}
+                                    {/*                        <a onClick={toggleNavbar} className="nav-link">About Us 01</a>*/}
+                                    {/*                    </Link>*/}
+                                    {/*                </li>*/}
 
-                                                    <li className="nav-item">
-                                                        <Link href="/about-2" activeClassName="active">
-                                                            <a onClick={toggleNavbar} className="nav-link">About Us 02</a>
-                                                        </Link>
-                                                    </li>
+                                    {/*                <li className="nav-item">*/}
+                                    {/*                    <Link href="/about-2" activeClassName="active">*/}
+                                    {/*                        <a onClick={toggleNavbar} className="nav-link">About Us 02</a>*/}
+                                    {/*                    </Link>*/}
+                                    {/*                </li>*/}
 
-                                                    <li className="nav-item">
-                                                        <Link href="/about-3" activeClassName="active">
-                                                            <a onClick={toggleNavbar} className="nav-link">About Us 03</a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
+                                    {/*                <li className="nav-item">*/}
+                                    {/*                    <Link href="/about-3" activeClassName="active">*/}
+                                    {/*                        <a onClick={toggleNavbar} className="nav-link">About Us 03</a>*/}
+                                    {/*                    </Link>*/}
+                                    {/*                </li>*/}
+                                    {/*            </ul>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/">
-                                                    <a onClick={e => e.preventDefault()} className="nav-link">
-                                                        Events <i className='bx bx-chevron-down'></i>
-                                                    </a>
-                                                </Link>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/">*/}
+                                    {/*                <a onClick={e => e.preventDefault()} className="nav-link">*/}
+                                    {/*                    Events <i className='bx bx-chevron-down'></i>*/}
+                                    {/*                </a>*/}
+                                    {/*            </Link>*/}
 
-                                                <ul className="dropdown-menu">
-                                                    <li className="nav-item">
-                                                        <Link href="/events" activeClassName="active">
-                                                            <a onClick={toggleNavbar} className="nav-link">Events</a>
-                                                        </Link>
-                                                    </li>
+                                    {/*            <ul className="dropdown-menu">*/}
+                                    {/*                <li className="nav-item">*/}
+                                    {/*                    <Link href="/events" activeClassName="active">*/}
+                                    {/*                        <a onClick={toggleNavbar} className="nav-link">Events</a>*/}
+                                    {/*                    </Link>*/}
+                                    {/*                </li>*/}
 
-                                                    <li className="nav-item">
-                                                        <Link href="/single-events" activeClassName="active">
-                                                            <a onClick={toggleNavbar} className="nav-link">Events Details</a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
+                                    {/*                <li className="nav-item">*/}
+                                    {/*                    <Link href="/single-events" activeClassName="active">*/}
+                                    {/*                        <a onClick={toggleNavbar} className="nav-link">Events Details</a>*/}
+                                    {/*                    </Link>*/}
+                                    {/*                </li>*/}
+                                    {/*            </ul>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/success-story" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Success Story</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/success-story" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Success Story</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/advisor" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Teacher</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/advisor" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Teacher</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/gallery" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Gallery</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/gallery" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Gallery</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/faq" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">FAQs</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/faq" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">FAQs</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/contact" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Contact Us</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/contact" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Contact Us</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/authentication" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Login/Register</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/authentication" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Login/Register</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/404" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">404 Error Page</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/404" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">404 Error Page</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/coming-soon" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Coming Soon</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/coming-soon" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Coming Soon</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/purchase-guide" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Purchase Guide</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/purchase-guide" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Purchase Guide</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/privacy-policy" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Privacy Policy</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/privacy-policy" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Privacy Policy</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/terms-of-service" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Terms of Service</a>
-                                                </Link>
-                                            </li>
-                                        </ul>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/terms-of-service" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Terms of Service</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
+                                    {/*    </ul>*/}
 
-                                    </li>
+                                    {/*</li>*/}
 
 
                                     <li className="nav-item">
