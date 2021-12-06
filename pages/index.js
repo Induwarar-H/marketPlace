@@ -19,14 +19,14 @@ const Index = ({ courses }) => {
         <React.Fragment>
             <MainBanner />
             <Features />
-            <TopCourses courses={courses} />
+            {/*<TopCourses courses={courses} />*/}
             <About />
             <Testimonials />
             <Instance />
             <Partner />
             <Ad />
             <Funfacts />
-            <Blog />
+            {/*<Blog />*/}
             <EdemyPremium />
         </React.Fragment>
     )

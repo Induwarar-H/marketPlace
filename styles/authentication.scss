@@ -1,0 +1,68 @@
+$font-family: 'Nunito', sans-serif;
+$font-family2: 'Playfair Display', serif;
+$main-color: #fe6722;
+$main-color2: #61a22e;
+$optional-color: #606060;
+$white-color: #ffffff;
+$black-color: #221638;
+$font-size: 16px;
+$transition: .5s;
+.authentication {
+
+  justify-content: center;
+
+  .navigation-login {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .btn-navigation {
+    width: 45%;
+    height: 60px;
+    justify-content: center;
+    margin: 10px 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding: {
+      right: 30px;
+      left: 30px;
+      top: 18px;
+      bottom: 12px;
+    };
+    border: none;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+    color: #1c1f23;
+    transition: $transition;
+  }
+
+  .btn-navigation:hover {
+    color: $white-color;
+    background-color: $main-color;
+  }
+
+  .select-btn-navigation {
+    width: 45%;
+    height: 60px;
+    justify-content: center;
+    margin: 10px 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding: {
+      right: 30px;
+      left: 30px;
+      top: 18px;
+      bottom: 12px;
+    };
+    border: none;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+    color: $white-color;
+    background-color: $main-color;
+    transition: $transition;
+  }
+}

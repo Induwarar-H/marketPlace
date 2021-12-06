@@ -38,7 +38,7 @@ const AdminNavbar = ({ user }) => {
               
                             <Link href="/">
                                 <a onClick={toggleNavbar} className="navbar-brand">
-                                    <img src="/images/logo.png" alt="logo" />
+                                    <img width={200} src="/images/logo.png" alt="logo" />
                                 </a>
                             </Link>
 
@@ -66,61 +66,6 @@ const AdminNavbar = ({ user }) => {
                                             </a>
                                         </Link>
 
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <Link href="/" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">eLearning School</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/index-2" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Vendor Certification Training</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/index-3" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Online Training School</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/index-4" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Distance Learning</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/index-5" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Language School</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/index-6" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Modern Schooling</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/index-7" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Yoga Training</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/index-8" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Health Coaching</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/index-9" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Kindergaten</a>
-                                                </Link>
-                                            </li>
-                                        </ul>
                                     </li>
    
                                     <li className="nav-item">

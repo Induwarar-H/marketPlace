@@ -19,7 +19,7 @@ const MainBanner = () => {
                     </div>
                     <div className="col-lg-6 col-md-12">
                         <div className="main-banner-image-style-two">
-                            <img src="/images/banner-img4.png" alt="image" />
+                            <img width={800} src="/images/banner-img4.png" alt="image" />
                         </div>
                     </div>
                 </div>

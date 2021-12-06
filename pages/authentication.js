@@ -2,32 +2,50 @@ import React from 'react'
 import PageBanner from '../components/Common/PageBanner'
 import LoginForm from '../components/Authentication/LoginForm'
 import RegisterForm from '../components/Authentication/RegisterForm'
+import {Card, CardBody} from "reactstrap";
 
-const Authentication = () => {
-    return (
-        <React.Fragment>
-            <PageBanner 
-                pageTitle="Authentication" 
-                homePageUrl="/" 
-                homePageText="Home" 
-                activePageText="Authentication" 
-            />  
 
-            <div className="profile-authentication-area ptb-100">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6 col-md-12">
-                            <LoginForm />
-                        </div>
-                        
-                        <div className="col-lg-6 col-md-12">
-                            <RegisterForm />
+class Authentication extends React.Component {
+    state = {
+        authType: 'LOGIN'
+    };
+
+
+    modelType = async (e) => {
+        console.log(e);
+        await this.setState({authType: e})
+    };
+
+    render() {
+        return (
+            <React.Fragment>
+                <PageBanner
+                    pageTitle="Authentication"
+                    homePageUrl="/"
+                    homePageText="Home"
+                    activePageText="Authentication"
+                />
+
+                <div className="profile-authentication-area ptb-100">
+                    <div className="container authentication">
+                        <div className='row'>
+                            <div className="col-2"></div>
+
+                            {this.state.authType === 'LOGIN' ?
+                                <div className="col-8">
+                                    <LoginForm loginmodel={this.modelType}/>
+                                </div> : this.state.authType === 'REG' ?
+                                    <div className="col-8">
+                                        <RegisterForm loginmodel={this.modelType}/>
+                                    </div> : null
+                            }
                         </div>
                     </div>
+
                 </div>
-            </div>
-        </React.Fragment>
-    )
+            </React.Fragment>
+        )
+    }
 }
 
 export default Authentication;

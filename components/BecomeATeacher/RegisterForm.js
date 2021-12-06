@@ -126,6 +126,27 @@ const RegisterForm = ({ user }) => {
                                         onChange={handleChange}
                                     />
                                 </div>
+                            </div><div className="col-lg-12 col-md-6">
+                                <div className="form-group">
+                                    <input
+                                        type="text"
+                                        name="number"
+                                        placeholder="Your phone number"
+                                        value={apply.number}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                            </div>
+                            <div className="col-lg-12 col-md-6">
+                                <div className="form-group">
+                                    <input
+                                        type="text"
+                                        name="number"
+                                        placeholder="Your phone number"
+                                        value={apply.number}
+                                        onChange={handleChange}
+                                    />
+                                </div>
                             </div>
 
                             <div className="col-lg-12 col-md-12">

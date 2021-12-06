@@ -38,7 +38,7 @@ const Navbar = ({ user }) => {
               
                             <Link href="/">
                                 <a onClick={toggleNavbar} className="navbar-brand">
-                                    <img src="/images/logo.png" alt="logo" />
+                                    <img style={{width:'200px'}} src="/images/logo.png" alt="logo" />
                                 </a>
                             </Link>
 
@@ -59,82 +59,14 @@ const Navbar = ({ user }) => {
                                 <SearchForm />
 
                                 <ul className="navbar-nav">
+
+
                                     <li className="nav-item">
-                                        <Link href="/" activeClassName="active">
-                                            <a onClick={e => e.preventDefault()} className="nav-link">
-                                                Home <i className='bx bx-chevron-down'></i>
+                                        <Link href="/">
+                                            <a className="nav-link">
+                                               Home
                                             </a>
                                         </Link>
-
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <Link href="/" activeClassName="active">
-                                                    <a className="nav-link">
-                                                        Learning Provider
-                                                    </a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/abcd" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">ABCD nav</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/elearning" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">eLearning School</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/vendor-certification" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Vendor Certification Training</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/online-training" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Online Training School</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/distance-learning" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Distance Learning</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/language-school" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Language School</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                            <Link href="/modern-schooling" activeClassName="active">
-                                                <a onClick={toggleNavbar} className="nav-link">Modern Schooling</a>
-                                            </Link>
-                                        </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/yoga-training" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Yoga Training</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/health-coaching" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Health Coaching</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/kindergaten" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Kindergaten</a>
-                                                </Link>
-                                            </li>
-                                        </ul>
                                     </li>
 
                                     <li className="nav-item">
@@ -263,373 +195,121 @@ const Navbar = ({ user }) => {
                                         </ul>
 
                                     </li>
- 
-                                    <li className="nav-item megamenu">
-                                        <Link href="/">
-                                            <a onClick={e => e.preventDefault()} className="nav-link">
-                                                Courses <i className='bx bx-chevron-down'></i>
-                                            </a>
-                                        </Link>
 
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <div className="container">
-                                                    <div className="row">
-                                                        <div className="col">
-                                                            <ul className="megamenu-submenu">
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-1" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Grid 01</a>
-                                                                    </Link>
-                                                                </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-2" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Grid 02</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-3" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Grid 03</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-4" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Grid 04</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-5" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses List 01</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-6" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Right Sidebar</a>
-                                                                    </Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
- 
-                                                        <div className="col">
-                                                            <ul className="megamenu-submenu">
-                                                                <li className="nav-item">
-                                                                    <Link href="/single-courses-1" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Single Layout 01</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/single-courses-2" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Single Layout 02</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/categories" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Categories</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/membership-levels" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Membership Levels</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/become-a-teacher" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Become a Teacher</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/profile" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Profile</a>
-                                                                    </Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
- 
-                                                        <div className="col">
-                                                            <ul className="megamenu-submenu">
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-1" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Grid 01</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-2" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Grid 02</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-3" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Grid 03</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-4" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Grid 04</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-5" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses List 01</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/courses-6" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Right Sidebar</a>
-                                                                    </Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
- 
-                                                        <div className="col">
-                                                            <ul className="megamenu-submenu">
-                                                                <li className="nav-item">
-                                                                    <Link href="/single-courses-1" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Single Layout 01</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/single-courses-2" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Single Layout 02</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/categories" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Courses Categories</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/membership-levels" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Membership Levels</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/become-a-teacher" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Become a Teacher</a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                <li className="nav-item">
-                                                                    <Link href="/profile" activeClassName="active">
-                                                                        <a onClick={toggleNavbar} className="nav-link">Profile</a>
-                                                                    </Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                
-                                                    <div className="row m-0 mobile-none">
-                                                        <div className="col-lg-2 col-sm-4 col-md-4 col-6 p-0">
-                                                            <div className="single-category-widget">
-                                                                <div className="icon">
-                                                                    <i className='bx bx-code-alt'></i>
-                                                                </div>
-                                                                <h3>Development</h3>
-                                                                <span className="sub-title">60 Courses</span>
-
-                                                                <Link href="/courses-1">
-                                                                    <a className="link-btn"></a>
-                                                                </Link>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="col-lg-2 col-sm-4 col-md-4 col-6 p-0">
-                                                            <div className="single-category-widget">
-                                                                <div className="icon">
-                                                                    <i className='bx bx-camera'></i>
-                                                                </div>
-                                                                <h3>Photography</h3>
-                                                                <span className="sub-title">21 Courses</span>
-                                                                
-                                                                <Link href="/courses-2">
-                                                                    <a className="link-btn"></a>
-                                                                </Link>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="col-lg-2 col-sm-4 col-md-4 col-6 p-0">
-                                                            <div className="single-category-widget">
-                                                                <div className="icon">
-                                                                    <i className='bx bx-layer'></i>
-                                                                </div>
-                                                                <h3>Design</h3>
-                                                                <span className="sub-title">58 Courses</span>
-                                                                
-                                                                <Link href="/courses-3">
-                                                                    <a className="link-btn"></a>
-                                                                </Link>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="col-lg-2 col-sm-4 col-md-4 col-6 p-0">
-                                                            <div className="single-category-widget">
-                                                                <div className="icon">
-                                                                    <i className='bx bxs-flag-checkered'></i>
-                                                                </div>
-                                                                <h3>Language</h3>
-                                                                <span className="sub-title">99 Courses</span>
-                                                                
-                                                                <Link href="/courses-4">
-                                                                    <a className="link-btn"></a>
-                                                                </Link>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="col-lg-2 col-sm-4 col-md-4 col-6 p-0">
-                                                            <div className="single-category-widget">
-                                                                <div className="icon">
-                                                                    <i className='bx bx-health'></i>
-                                                                </div>
-                                                                <h3>Fitness</h3>
-                                                                <span className="sub-title">21 Courses</span>
-                                                                
-                                                                <Link href="/courses-5">
-                                                                    <a className="link-btn"></a>
-                                                                </Link>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="col-lg-2 col-sm-4 col-md-4 col-6 p-0">
-                                                            <div className="single-category-widget">
-                                                                <div className="icon">
-                                                                    <i className='bx bx-line-chart'></i>
-                                                                </div>
-                                                                <h3>Business</h3>
-                                                                <span className="sub-title">49 Courses</span>
-                                                                
-                                                                <Link href="/courses-6">
-                                                                    <a className="link-btn"></a>
-                                                                </Link>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
- 
                                     <li className="nav-item">
-                                        <Link href="/">
-                                            <a onClick={e => e.preventDefault()} className="nav-link">
-                                                Shop <i className='bx bx-chevron-down'></i>
+                                        <Link href="/courses-6">
+                                            <a className="nav-link">
+                                                Courses
                                             </a>
                                         </Link>
-
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <Link href="/products-list-1" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Product List 01</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/products-list-2" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Product List 02</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/cart" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Cart</a>
-                                                </Link>
-                                            </li>
-
-                                            <li className="nav-item">
-                                                <Link href="/checkout" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Checkout</a>
-                                                </Link>
-                                            </li>
- 
-                                            <li className="nav-item">
-                                                <Link href="/single-products" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Product Details</a>
-                                                </Link>
-                                            </li>
-                                        </ul>
                                     </li>
+
  
-                                    <li className="nav-item">
-                                        <Link href="/">
-                                            <a onClick={e => e.preventDefault()} className="nav-link">
-                                                Blog <i className='bx bx-chevron-down'></i>
-                                            </a>
-                                        </Link>
+                                    {/*<li className="nav-item">*/}
+                                    {/*    <Link href="/">*/}
+                                    {/*        <a onClick={e => e.preventDefault()} className="nav-link">*/}
+                                    {/*            Shop <i className='bx bx-chevron-down'></i>*/}
+                                    {/*        </a>*/}
+                                    {/*    </Link>*/}
 
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <Link href="/blog-1" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Grid (2 in Row)</a>
-                                                </Link>
-                                            </li>
+                                    {/*    <ul className="dropdown-menu">*/}
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/products-list-1" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Product List 01</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/blog-2" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Grid (3 in Row)</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/products-list-2" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Product List 02</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/blog-3" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Grid (Full Width)</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/cart" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Cart</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/blog-4" activeClassName="active">
-                                                    <a onClick={toggleNavbar} className="nav-link">Right Sidebar</a>
-                                                </Link>
-                                            </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/checkout" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Checkout</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                            <li className="nav-item">
-                                                <Link href="/">
-                                                    <a onClick={e => e.preventDefault()} className="nav-link">
-                                                        Single Post <i className='bx bx-chevron-down'></i>
-                                                    </a>
-                                                </Link>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/single-products" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Product Details</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
+                                    {/*    </ul>*/}
+                                    {/*</li>*/}
+ 
+                                    {/*<li className="nav-item">*/}
+                                    {/*    <Link href="/">*/}
+                                    {/*        <a onClick={e => e.preventDefault()} className="nav-link">*/}
+                                    {/*            Blog <i className='bx bx-chevron-down'></i>*/}
+                                    {/*        </a>*/}
+                                    {/*    </Link>*/}
 
-                                                <ul className="dropdown-menu">
-                                                    <li className="nav-item">
-                                                        <Link href="/single-blog-1" activeClassName="active">
-                                                            <a onClick={toggleNavbar} className="nav-link">Default</a>
-                                                        </Link>
-                                                    </li> 
+                                    {/*    <ul className="dropdown-menu">*/}
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/blog-1" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Grid (2 in Row)</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                                    <li className="nav-item">
-                                                        <Link href="/single-blog-2" activeClassName="active">
-                                                            <a onClick={toggleNavbar} className="nav-link">With Video</a>
-                                                        </Link>
-                                                    </li> 
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/blog-2" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Grid (3 in Row)</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
 
-                                                    <li className="nav-item">
-                                                        <Link href="/single-blog-3" activeClassName="active">
-                                                            <a onClick={toggleNavbar} className="nav-link">With Image Slider</a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/blog-3" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Grid (Full Width)</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
+
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/blog-4" activeClassName="active">*/}
+                                    {/*                <a onClick={toggleNavbar} className="nav-link">Right Sidebar</a>*/}
+                                    {/*            </Link>*/}
+                                    {/*        </li>*/}
+
+                                    {/*        <li className="nav-item">*/}
+                                    {/*            <Link href="/">*/}
+                                    {/*                <a onClick={e => e.preventDefault()} className="nav-link">*/}
+                                    {/*                    Single Post <i className='bx bx-chevron-down'></i>*/}
+                                    {/*                </a>*/}
+                                    {/*            </Link>*/}
+
+                                    {/*            <ul className="dropdown-menu">*/}
+                                    {/*                <li className="nav-item">*/}
+                                    {/*                    <Link href="/single-blog-1" activeClassName="active">*/}
+                                    {/*                        <a onClick={toggleNavbar} className="nav-link">Default</a>*/}
+                                    {/*                    </Link>*/}
+                                    {/*                </li> */}
+
+                                    {/*                <li className="nav-item">*/}
+                                    {/*                    <Link href="/single-blog-2" activeClassName="active">*/}
+                                    {/*                        <a onClick={toggleNavbar} className="nav-link">With Video</a>*/}
+                                    {/*                    </Link>*/}
+                                    {/*                </li> */}
+
+                                    {/*                <li className="nav-item">*/}
+                                    {/*                    <Link href="/single-blog-3" activeClassName="active">*/}
+                                    {/*                        <a onClick={toggleNavbar} className="nav-link">With Image Slider</a>*/}
+                                    {/*                    </Link>*/}
+                                    {/*                </li>*/}
+                                    {/*            </ul>*/}
+                                    {/*        </li>*/}
+                                    {/*    </ul>*/}
+                                    {/*</li>*/}
                                 
                                     <li className="nav-item">
-                                        <Link href="/become-a-teacher">
+                                        <Link href="/becomeATeacher">
                                             <a className="nav-link">
                                                 Become A Teacher
                                             </a>

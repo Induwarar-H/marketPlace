@@ -9,6 +9,7 @@ import 'react-tabs/style/react-tabs.css'
 import 'react-image-lightbox/style.css'
 import '../styles/style.css'
 import '../styles/responsive.css'
+import '../styles/authentication.scss'
 
 // If you want RTL style, comment out below line
 // import '../styles/rtl.css'

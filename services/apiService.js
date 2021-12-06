@@ -7,6 +7,7 @@ import qs from "qs";
 import swal from "sweetalert";
 import * as commonFunc from "../utils/commonFunc";
 import {lang, language} from "../const/language";
+import Router from "next/router";
 
 export const callApi = async(apiObject) => {
     let body = {};
@@ -40,9 +41,8 @@ export const callApi = async(apiObject) => {
             if(!response.data.success){
                 let code = response.data.code;
                 if(code === 470 || code === 471){
-                    // commonFunc.notifyMessage(response.message, 0);
                     await commonFunc.removeCookiesValues();
-                    window.location = `${constants.BASE_ROUTE}${constants.AUTH_LOGIN_ROUTE}`;
+                    Router.push('/')
                 }
             }
             result = await {...response.data,status: response.data.success ? 1 : 0 };
@@ -51,7 +51,7 @@ export const callApi = async(apiObject) => {
 
             if(apiObject.note === constants.VERIFY_USER_NOTE){
                 await commonFunc.removeCookiesValues();
-                window.location = `${constants.BASE_ROUTE}${constants.AUTH_LOGIN_ROUTE}`;
+                Router.push('/')
             }
 
             if (error !== undefined) {
@@ -131,7 +131,7 @@ export const renewTokenHandler = async (apiObject) => {
                         switch (value) {
                             case "action":
                                 commonFunc.removeCookiesValues();
-                                window.location = `${constants.BASE_ROUTE}${constants.AUTH_LOGIN_ROUTE}`;
+                                Router.push('/')
                                 break;
                             default:
                                 break;
