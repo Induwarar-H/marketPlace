@@ -22,4 +22,6 @@ export const meetingPassword = 'aJWRCOusyx';
 // api service
 export const VERIFY_USER_NOTE = "VERIFY_USER_NOTE";
 export const EXPIRED_TEXT = 'language[lang].SessionExpireNote';
+export const PASSWORD_TEXT = language[lang].PasswordText;
+export const ALERT_TEXT = language[lang].AreYouSureYouWantToProceed;
 

@@ -9,8 +9,10 @@ import Footer from './Footer'
 import StudentNavbar from './StudentNavbar'
 import AdminNavbar from './AdminNavbar'
 import Preloader from './Preloader'
+import "toastr/build/toastr.min.css"
 
 const Layout = ({ children, user }) => {
+
     const [loader, setLoader] = React.useState(true)
     React.useEffect(() => {
         setTimeout(() => {

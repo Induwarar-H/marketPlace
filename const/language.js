@@ -203,8 +203,15 @@ export const language = {
         correctAnswerText: 'Currect Answer',
         wronfAnswerText: 'Wrong Answer',
         undifinedAnswerText: 'Answer for incomplete answers ',
+
+
+        OTP:'OTP Code',
+        OTPVerify:'Verify Your OTP Code',
     },
     SIN: {
+
+        OTP:'OTP කේතය ',
+        OTPVerify:'OTPකේතය සත්‍යාපනය කරන්න ',
         Welcome: "'Edulab' වෙත සාදරයෙන් පිළිගනිමු",
 
         // --- register form -----------------

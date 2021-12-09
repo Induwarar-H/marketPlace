@@ -20,6 +20,7 @@ export const removeCookiesValues = async () => {
 
 
 export const notifyMessage = (msg, type, duration) => {
+    console.log(msg)
     let msgType = "warning";
 
     if (type === 2) {
