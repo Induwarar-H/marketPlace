@@ -10,7 +10,7 @@ import 'react-image-lightbox/style.css'
 import '../styles/style.css'
 import '../styles/responsive.css'
 import '../styles/authentication.scss'
-
+import '../components/Authentication/authentication.css'
 // If you want RTL style, comment out below line
 // import '../styles/rtl.css'
 

@@ -13,8 +13,8 @@ import EdemyPremium from '@/components/Index/EdemyPremium'
 import axios from 'axios'
 import baseUrl from '@/utils/baseUrl'
 
-const Index = ({ courses }) => {
-    // console.log(courses)
+const Index = ({ courses,props }) => {
+
     return (
         <React.Fragment>
             <MainBanner />

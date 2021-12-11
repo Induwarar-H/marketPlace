@@ -3702,15 +3702,16 @@ Courses Area CSS
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .02);
 
     .courses-image {
-        display: block;
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         position: relative;
         z-index: 1;
-        overflow: hidden;
+        width: 100%;
+        padding: 50px;
+        zoom: 1.2;
 
         img {
             border-radius: 5px;
-            width: 100%;
+            width: 80%;
             transition: $transition;
         }
         &::before {
@@ -3841,8 +3842,12 @@ Courses Area CSS
     text-align: center;
 
     .courses-image {
+        border-radius: 5px 5px 0 0;
         position: relative;
         z-index: 1;
+        width: 100%;
+        padding: 50px;
+        zoom: 1.2;
 
         &::before {
             content: '';
