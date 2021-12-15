@@ -105,9 +105,12 @@ const RegisterForm = (props) => {
 
     const registerHandler = () => {
         authService.userRegisterCheck(user).then(res => {
-            if (res.status) {
+            if (res.success) {
                 commonFunc.notifyMessage(res.message, 1)
                 setIsOtp(true);
+            }else{
+                commonFunc.notifyMessage(res.message, 0)
+                setIsOtp(false);
             }
         })
     }
@@ -363,11 +366,11 @@ const RegisterForm = (props) => {
                             />
                         </div>
 
-                        <button type="submit" onClick={sendOtpVerification}>
+                        <button onClick={sendOtpVerification}>
                             {language[lang].OTPVerify}
                         </button>
 
-                         <p className={"expire-text"}>{language[lang].DidNotReceiveTheCode} <label className={'resend-text'} >{language[lang].Resend}</label></p>
+                         <p className={"getOtpAgain"}>{language[lang].DidNotReceiveTheCode} <label className={'resend-text'} >{language[lang].Resend}</label></p>
 
                     </div>
 

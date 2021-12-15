@@ -1,9 +1,4 @@
-/**
- * Created by WebStorm.
- * User: athukorala
- * Date: 7/23/20
- * Time: 10:44 AM
- */
+
 import ApiService from './apiService';
 
 export async function renewToken(token) {

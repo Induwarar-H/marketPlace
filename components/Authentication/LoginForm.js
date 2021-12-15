@@ -12,6 +12,8 @@ import * as validator from '../../utils/validator'
 import {lang, language} from "../../const/language"
 import * as constants from '../../const/constants'
 import Cookies from "js-cookie";
+import { useRouter } from 'next/router';
+import Router, { withRouter } from 'next/router'
 
 const INITIAL_USER = {
     email: '',
@@ -37,7 +39,7 @@ class LoginForm extends React.Component {
         let {username, password} = this.state;
         // username.trim() === "" ? commonFunc.notifyMessage(language[lang].MobileNumberCannotBeEmpty) :
         //     password.trim() === "" ? commonFunc.notifyMessage(language[lang].PasswordCannotBeEmpty) :
-                this.fetchHandler();
+        this.fetchHandler();
     };
 
     fetchHandler = () => {
@@ -51,12 +53,19 @@ class LoginForm extends React.Component {
 
 
         authService.loginUser(qs.stringify(obj)).then(response => {
-            console.log(response);
+
             if (response.access_token) {
                 Cookies.set(constants.ACCESS_TOKEN, response.access_token);
                 Cookies.set(constants.REFRESH_TOKEN, response.refresh_token);
                 Cookies.set(constants.VERIFY_CODE, response.verify_code);
+                console.log(response.user.userDetails)
+                let details = response.user.userDetails
+                localStorage.setItem("User", JSON.stringify(details));
                 // this.props.userDetailsHandler(response.user.userDetails);
+                let user = response.user.userDetails;
+
+                Router.push(
+                    '/');
                 return;
             }
             if (!response.success) {

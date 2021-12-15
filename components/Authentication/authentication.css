@@ -1,0 +1,11 @@
+.getOtpAgain{
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+.resend-text:hover{
+    color: #fe6722;
+    text-decoration: #fe6722 underline;
+}

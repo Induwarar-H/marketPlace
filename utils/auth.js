@@ -1,5 +1,7 @@
 import cookie from 'js-cookie'
 import Router from 'next/router'
+import * as authService from '../services/auth'
+import * as commonFunc from "@/utils/commonFunc";
 
 export const handleLogin = (token) => {
     cookie.set('token', token);
@@ -7,8 +9,8 @@ export const handleLogin = (token) => {
 }
 
 export const redirectUser = (ctx, location) => {
-    if(ctx.req){
-        ctx.res.writeHead(302, { Location: location });
+    if (ctx.req) {
+        ctx.res.writeHead(302, {Location: location});
         ctx.res.end()
     } else {
         Router.push(location)
@@ -16,6 +18,7 @@ export const redirectUser = (ctx, location) => {
 }
 
 export const handleLogout = () => {
-    cookie.remove('token')
-    Router.push('/')
-}
+    authService.logoutUser().then(res=>{
+        commonFunc.notifyMessage(res.message)
+    })
+};
