@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const About = () => {
+const About = (props) => {
     return (
         <div className="about-area ptb-100 bg-f9fbff">
             <div className="container">
@@ -22,7 +22,7 @@ const About = () => {
                                 <li><span><i className="flaticon-tutorials"></i> Remote Learning</span></li>
                                 <li><span><i className="flaticon-self-growth"></i> Self Development</span></li>
                             </ul>
-                            <Link href="/courses-1">
+                            <Link href="/courses-2">
                                 <a className="default-btn"><i className="flaticon-user"></i>View All Courses<span></span></a>
                             </Link>
                         </div>

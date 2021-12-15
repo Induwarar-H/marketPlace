@@ -1,0 +1,27 @@
+.courseTile{
+  .blur-img {
+    height: 200px !important;
+    zoom: 1.2  !important;
+    border-radius: 10px  !important;
+    position: absolute  !important;
+    width: 100%  !important;
+    object-fit: cover  !important;
+    filter: blur(21)!important ;
+    -webkit-filter: blur(5px) brightness(100%)  !important;
+    filter: blur(5px) brightness(100%)  !important;
+    z-index: 0  !important;
+    opacity: 0.6  !important;
+  }
+
+  .slideshow-pro-image {
+    width: 100%;
+    height: 200px;
+    zoom: 1.2;
+    object-fit: cover;
+    border-radius: 10px;
+    -webkit-filter: blur(0) brightness(100%);
+    filter: blur(0) brightness(100%);
+    object-fit: contain;
+    z-index: 1;
+  }
+}

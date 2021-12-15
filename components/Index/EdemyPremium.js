@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 
-const EdemyPremium = () => {
+const EdemyPremium = (props) => {
+    console.log('GO AT YOUR OWN PACE',props.userType)
     return (
         <div>
             <div className="view-all-courses-area-three bg-fff8f8">
@@ -17,7 +18,7 @@ const EdemyPremium = () => {
                                 <span className="sub-title">DISTANCE LEARNING</span>
                                 <h2>Get ahead with Learning Paths. Stay Sharp.</h2>
                                 <p>With The Open University you can study whenever and wherever you choose. We have students in over 128 countries, and a global reputation as a pioneer in the field of flexible learning. Our flexible teaching also means, if you travel often or need to relocate, you can continue to study wherever you go.</p>
-                                <Link href="/courses-1">
+                                <Link href="/courses-2">
                                     <a className="default-btn"><i className="flaticon-agenda"></i>View Courses<span></span></a>
                                 </Link>
                             </div>

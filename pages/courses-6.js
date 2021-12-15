@@ -5,7 +5,7 @@ import Link from 'next/link';
 import CoursesSidebar from '../components/Courses/CoursesSidebar';
 // import Footer from '../components/_App/Footer';
 
-import CourseCardView from './courses/courseCardView'
+import CourseCardView from './courseTile/courseCardView'
 
 const CoursesRightSidebar = () => {
     return (

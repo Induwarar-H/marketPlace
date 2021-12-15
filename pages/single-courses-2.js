@@ -5,6 +5,8 @@ import CoursesDetailsSidebar from '@/components/SingleCoursesTwo/CoursesDetailsS
 import Link from 'next/link';
 
 const SingleCourses = () => {
+    console.log(props,'single courseView Props');
+
     return (
         <React.Fragment>
             <PageBanner 

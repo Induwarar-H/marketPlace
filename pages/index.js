@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect}  from 'react'
 import MainBanner from '@/components/Index/MainBanner'
 import Features from '@/components/Index/Features'
 import TopCourses from '@/components/Index/TopCourses'
@@ -12,22 +12,32 @@ import Blog from '@/components/Index/Blog'
 import EdemyPremium from '@/components/Index/EdemyPremium'
 import axios from 'axios'
 import baseUrl from '@/utils/baseUrl'
+import Cookies from "js-cookie";
+import * as constants from "../const/constants";
 
-const Index = ({ courses,props }) => {
+const Index = ({courses, props}) => {
+    const [userType, setUserType] = React.useState(0);
+    useEffect(() => {
+        let access_token = Cookies.get(constants.ACCESS_TOKEN);
+        let userType = !access_token ? 0 : 1;
+        setUserType(userType);
+
+    }, []);
+
 
     return (
         <React.Fragment>
-            <MainBanner />
-            <Features />
+            <MainBanner/>
+            <Features/>
             {/*<TopCourses courses={courses} />*/}
-            <About />
-            <Testimonials />
-            <Instance />
-            <Partner />
-            <Ad />
-            <Funfacts />
+            <About userType={userType}/>
+            <Testimonials/>
+            <Instance/>
+            <Partner/>
+            <Ad/>
+            <Funfacts/>
             {/*<Blog />*/}
-            <EdemyPremium />
+            <EdemyPremium userType={userType}/>
         </React.Fragment>
     )
 }

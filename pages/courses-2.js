@@ -2,7 +2,7 @@ import React from 'react';
 // import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Link from 'next/link';
-import CourseCardView from "./courses/courseCardView";
+import CourseCardView from "./courseTile/courseCardView";
 // import Footer from '../components/_App/Footer';
 
 const CoursesGrid02 = () => {
