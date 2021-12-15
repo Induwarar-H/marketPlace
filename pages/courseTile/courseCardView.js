@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from "next/link";
 import * as courseService from '../../services/course'
+import {useRouter} from "next/router";
+import * as router from "next";
+
 
 class courseCardView extends React.Component {
     state = {
@@ -9,7 +12,6 @@ class courseCardView extends React.Component {
 
     async componentDidMount() {
         await this.fetchCourse();
-        console.log(this.state.course)
     }
 
     fetchCourse = async () => {
@@ -20,6 +22,12 @@ class courseCardView extends React.Component {
         }).catch(err => {
             console.log(err)
         })
+    };
+
+    selectCourseView = () => {
+        console.log('select course')
+        this.context.router.transitionTo('/single-courses-1');
+        // router.push('/single-courses-1');
     }
 
     render() {
@@ -28,13 +36,19 @@ class courseCardView extends React.Component {
             <div className="row">
 
                 {this.state.course.map((course, index) => {
-                    return <div className="col-lg-4 col-md-6">
+                    return <div className="col-lg-4 col-md-6 courseTile" key={course.id}>
+
                         <div className="single-courses-box without-boxshadow">
                             <div className="courses-image">
-                                <Link href="#">
-                                    <a className="d-block image">
-                                        <img src={course.imageUrl} alt="image"/>
-                                    </a>
+                                <Link href={"/courseTile/"+course.id} >
+                                    <div align="center" className="display-inline">
+                                        <img src={course.imageUrl} alt={"."}
+                                             className="blur-img"
+                                        />
+                                        <img src={course.imageUrl} alt={"."}
+                                             className="slideshow-pro-image shadow"
+                                        />
+                                    </div>
                                 </Link>
                                 <a href="#" className="fav">
                                     <i className="flaticon-heart"></i>
@@ -48,12 +62,13 @@ class courseCardView extends React.Component {
                                 </div>
 
                                 <h3>
-                                    <Link href="/single-courses-1">
-                                        <a>{course.name}</a>
+                                    <Link href={"/courseTile/"+course.id} >
+                                        <a>{course.name}
+                                           </a>
                                     </Link>
                                 </h3>
 
-                                <p>{course.description}</p>
+                                {/*<p style={{textOverflow:'ellipsis',overflow: "hidden",whiteSpace:'nowrap'}}>{course.description} </p>*/}
                                 <ul className="courses-box-footer d-flex justify-content-between align-items-center">
                                     <li>
                                         <i className='flaticon-agenda'></i> 15 Lessons
@@ -64,6 +79,7 @@ class courseCardView extends React.Component {
                                 </ul>
                             </div>
                         </div>
+
                     </div>
                 })}
 
@@ -502,3 +518,4 @@ class courseCardView extends React.Component {
 }
 
 export default courseCardView
+
