@@ -87,6 +87,7 @@ export const language = {
         StudentSignInWarning: 'To be able to purchase this class, please sign in to the panel',
         StudentSignInWarning2: 'To be able to view this class, please sign in to the panel',
         StudentSignInWarning3: 'To be able to join this class, please sign in to the panel',
+        StudentSignInWarning4: 'To be able to buy this course, please sign in to the panel',
         StudentSignInWarningForClassLesson: 'To be able to view this class content, please sign in to the panel',
         StudentSignInWarningForVideo: 'To be able to view paper, please sign in to the panel',
         AreYouSureYouWantToProceed: 'Are you sure you want to proceed?',
@@ -207,6 +208,7 @@ export const language = {
 
         OTP:'OTP Code',
         OTPVerify:'Verify Your OTP Code',
+        courseBuyMsg:'Are you sure you want to purchase this course?'
     },
     SIN: {
 
@@ -289,6 +291,7 @@ export const language = {
         StudentSignInWarning: 'මාසික ප්‍රවේශ පත්‍රය ලබගැනීම සදහා කරුණාකර ගිණුමට login වන්න හෝ ගිණුමක් නිර්මාණය කරගන්න. (Please login to the panel)',
         StudentSignInWarning2: 'මෙම පාඩම නැරඹිම සදහා කරුණාකර ගිණුමට login වන්න හෝ ගිණුමක් නිර්මාණය කරගන්න. (Please login to the panel)',
         StudentSignInWarning3: 'මෙම පංතියට සම්බන්ධ වීමට කරුණාකර ගිණුමට login වන්න හෝ ගිණුමක් නිර්මාණය කරගන්න. (Please login to the panel)',
+        StudentSignInWarning4: 'මෙම පාඨමාලාවට සම්බන්ධ වීමට කරුණාකර ගිණුමට login වන්න හෝ ගිණුමක් නිර්මාණය කරගන්න. (Please login to the panel)',
         StudentSignInWarningForClassLesson: 'VIDEO සහ PDF ලබගැනීම සදහා කරුණාකර ගිණුමට login වන්න හෝ ගිණුමක් නිර්මාණය කරගන්න. (Please login to the panel)',
         StudentSignInWarningForVideo: 'Paper ලබගැනීම සදහා කරුණාකර ගිණුමට පූරනය වන්න හෝ ගිණුමක් නිර්මාණය කරගන්න. (Please sign in to the panel)',
         AreYouSureYouWantToProceed: 'ඔබට ඉදිරියට යාමට අවශ්‍ය බව ඔබට විශ්වාසද? (Are you sure you want to proceed?)',
@@ -431,6 +434,7 @@ export const language = {
         fullPaymentSuccess: 'සම්පූර්ණ මුදල ගෙවා ඇත!',
         emptyTimeTableCourse: 'කාලසටහන ඇතුළත් කර නැත.',
         ListOfJoinedCourses: 'මුදල් ගෙවූ පාඨමාලා ලැයිස්තුව',
-        teacherComment:'ගුරුවරයාගේ ප්‍රතිචාරය'
+        teacherComment:'ගුරුවරයාගේ ප්‍රතිචාරය',
+        courseBuyMsg:'ඔබට මෙම පාඨමාලාව මිලදී ගැනීමට අවශ්‍ය බව ස්ථිරද?'
     },
 };
