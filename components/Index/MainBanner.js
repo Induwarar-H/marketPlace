@@ -21,8 +21,10 @@ class MainBanner extends React.Component {
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12">
                             <div className="main-banner-content-style-two">
-                                <h1>This is edulab market place  edulab market place</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
+                                <h1>No Limits for Learning with Edulab</h1>
+                                <p>Shouldn't limit your expectation <br/>
+                                    Start you online learning  Complete a variety of courses online as you need and earn your certificate.
+                                </p>
                                 {this.state.userType !==1?
                                 <Link href="/authentication">
                                     <a className="default-btn">

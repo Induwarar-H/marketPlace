@@ -14,8 +14,10 @@ const About = (props) => {
                     <div className="col-lg-6 col-md-12">
                         <div className="about-content">
                             <span className="sub-title">DISTANCE LEARNING</span>
-                            <h2>Develop Your Skills, Learn Something New, and Grow Your Skills From Anywhere in the World!</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h2>Enhance your knowledge and develop your skill set from any corner of the world online.
+                            </h2>
+                            <p>Learn on your schedule, explore different courses and find the best suit course for you with lifetime access.
+                            </p>
                             <ul className="features-list">
                                 <li><span><i className="flaticon-experience"></i> Expert Instruction</span></li>
                                 <li><span><i className="flaticon-time-left"></i> Lifetime Access</span></li>

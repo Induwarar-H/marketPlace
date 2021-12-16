@@ -9,8 +9,10 @@ const Instance = () => {
                     <div className="col-lg-7 col-md-12">
                         <div className="get-instant-courses-content-style-two">
                             <span className="sub-title">GET INSTANT ACCESS TO THE FREE</span>
-                            <h2>Self Development Course</h2>
-                            <p>With The Open University you can study whenever and wherever you choose. We have students in over 128 countries, and a global reputation as a pioneer in the field of flexible learning. Our flexible teaching also means, if you travel often or need to relocate, you can continue to study wherever you go.</p>
+                            <h2>Explore free courses and start freshly </h2>
+                            <p>Edulab marketplace offers a variety of free courses, to provide you a chance to boost your life through education. We believe these courses will help you to build a futuristic professional tomorrow.
+
+                            </p>
                             <Link href="/authentication">
                                 <a className="default-btn">
                                     <i className="flaticon-user"></i>Start For Free<span></span>
