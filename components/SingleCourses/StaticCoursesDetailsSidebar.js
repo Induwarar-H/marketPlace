@@ -14,13 +14,11 @@ const StaticCoursesDetailsSidebar = (props) => {
     const [display, setDisplay] = React.useState(false);
     const [paymentView, setPaymentView] = React.useState(false);
     const [userType, setUserType] = React.useState();
-    const [courseDetails, setCourseDetails] = React.useState();
+
 
     React.useEffect(() => {
         setDisplay(true);
         setUserType(props.userType);
-        setCourseDetails(props.courseDetails);
-
     }, []);
     // Popup Video
     const [isOpen, setIsOpen] = React.useState(true);
@@ -87,7 +85,7 @@ const StaticCoursesDetailsSidebar = (props) => {
         //     });
         // }
     };
-
+    console.log("staticSideBar",props.courseDetails)
     return (
         <React.Fragment>
             {paymentView? <PaymentModal/>: null}
@@ -127,7 +125,7 @@ const StaticCoursesDetailsSidebar = (props) => {
 							<span>
 								<i className="flaticon-tag"></i> Price
 							</span>
-                            {courseDetails.fee}
+                            {props.courseDetails.fee}
                         </div>
                     </li>
                     <li>
@@ -135,7 +133,7 @@ const StaticCoursesDetailsSidebar = (props) => {
 							<span>
 								<i className="flaticon-teacher"></i> Instructor
 							</span>
-                         {courseDetails.teacher.name}
+                         {props.courseDetails.teacher.name}
                         </div>
                     </li>
                     <li>
@@ -168,7 +166,7 @@ const StaticCoursesDetailsSidebar = (props) => {
 							<span>
 								<i className="flaticon-lock"></i> Access
 							</span>
-                            {courseDetails.courseAccess}
+                            {props.courseDetails.courseAccess}
                         </div>
                     </li>
                 </ul>

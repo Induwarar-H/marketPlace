@@ -208,12 +208,14 @@ export const language = {
 
         OTP:'OTP Code',
         OTPVerify:'Verify Your OTP Code',
-        courseBuyMsg:'Are you sure you want to purchase this course?'
+        courseBuyMsg:'Are you sure you want to purchase this course?',
+        getYourOTP:'Get Your OTP code'
     },
     SIN: {
 
         OTP:'OTP කේතය ',
-        OTPVerify:'OTPකේතය සත්‍යාපනය කරන්න ',
+        OTPVerify:'OTP කේතය සත්‍යාපනය කරන්න ',
+        getYourOTP:'ඔබගේ OTP කේතය ලබාගන්න.',
         Welcome: "'Edulab' වෙත සාදරයෙන් පිළිගනිමු",
 
         // --- register form -----------------

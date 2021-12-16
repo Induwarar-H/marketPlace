@@ -52,6 +52,15 @@ export async function verfifyOtp(data) {
     return await ApiService.callApi(apiObject);
 }
 
+export async function forgetPasswordOtp(data) {
+    const apiObject = {};
+    apiObject.method = 'PATCH';
+    apiObject.authentication = false;
+    apiObject.endpoint = `student/public/otp/existing/${data}`;
+    apiObject.body = null;
+    return await ApiService.callApi(apiObject);
+}
+
 
 
 export async function logoutUser() {

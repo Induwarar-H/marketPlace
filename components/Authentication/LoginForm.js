@@ -80,6 +80,10 @@ class LoginForm extends React.Component {
         this.props.loginmodel('REG');
     };
 
+    forgetPasswordNav =()=>{
+        this.props.loginmodel('FORGET');
+    };
+
     render() {
         let {username, password} = this.state;
         return (
@@ -124,9 +128,11 @@ class LoginForm extends React.Component {
                         </div>
 
                         <div className="col-lg-6 col-md-6 col-sm-6 lost-your-password-wrap">
-                            <Link href="/reset-password">
+                            <div  onClick={() => {
+                                this.forgetPasswordNav()
+                            }}>
                                 <a className="lost-your-password">Lost your password?</a>
-                            </Link>
+                            </div>
                         </div>
                         <div className="col-lg-12 col-md-12 col-sm-12 lost-your-password-wrap" style={{marginTop: 20}}>
                             <div onClick={() => {

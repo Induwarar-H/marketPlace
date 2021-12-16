@@ -2,6 +2,7 @@ import React from 'react'
 import PageBanner from '../components/Common/PageBanner'
 import LoginForm from '../components/Authentication/LoginForm'
 import RegisterForm from '../components/Authentication/RegisterForm'
+import ForgetPassword from '../components/Authentication/forgotPassword'
 import {Card, CardBody} from "reactstrap";
 
 
@@ -37,7 +38,10 @@ class Authentication extends React.Component {
                                 </div> : this.state.authType === 'REG' ?
                                     <div className="col-8">
                                         <RegisterForm loginmodel={this.modelType}/>
-                                    </div> : null
+                                    </div> :this.state.authType === 'FORGET' ?
+                                        <div className="col-8">
+                                            <ForgetPassword loginmodel={this.modelType}/>
+                                        </div>:null
                             }
                         </div>
                     </div>

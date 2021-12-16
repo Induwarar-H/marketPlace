@@ -64,7 +64,7 @@ class courseCardView extends React.Component {
                                 <h3>
                                     <Link href={"/courseTile/"+course.id} >
                                         <a>{course.name}
-                                           </a>
+                                        </a>
                                     </Link>
                                 </h3>
 
