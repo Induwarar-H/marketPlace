@@ -2,8 +2,11 @@ import React from 'react'
 import Link from '@/utils/ActiveLink'
 import {handleLogout} from '@/utils/auth'
 import SearchForm from './SearchForm'
-import {withRouter} from 'next/router'
+import Router, { withRouter } from 'next/router'
 import * as constants from '../../const/constants'
+import * as commonFunc from '../../utils/commonFunc'
+import {lang, language} from "../../const/language";
+import swal from "sweetalert";
 
 const Navbar = ({user, ...props}) => {
 
@@ -29,6 +32,29 @@ const Navbar = ({user, ...props}) => {
         window.scrollTo(0, 0);
     });
 
+    const logout = ()=>{
+        console.log('logOut');
+        swal({
+            title: constants.ALERT_TEXT,
+            icon: null,
+            closeOnClickOutside: false,
+            buttons: {
+                cancel: language[lang].NoText,
+                dangerMode: {text: language[lang].YesText, value: "action", className: "okay-btn"}
+            },
+        }).then((value) => {
+            switch (value) {
+                case "action":
+                    commonFunc.removeCookiesValues();
+                     commonFunc.notifyMessage("Logout successfully",1);
+                    Router.push(
+                        '/');
+                    break;
+                default:
+                    break;
+            }
+        });
+    };
 
     const classOne = menu ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';
     const classTwo = menu ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
@@ -203,7 +229,7 @@ const Navbar = ({user, ...props}) => {
 
 
                                     <li className="nav-item">
-                                        <Link  href="/courses-2">
+                                        <Link  href="/courses-2" as="courses">
                                             <a className="nav-link">
                                                 Courses
                                             </a>
@@ -324,20 +350,20 @@ const Navbar = ({user, ...props}) => {
                                 </ul>
 
                                 <div className="others-option d-flex align-items-center">
-                                    <div className="option-item">
-                                        <div className="cart-btn">
-                                            <Link href="/cart">
-                                                <a><i className='flaticon-shopping-cart'></i> <span>3</span></a>
-                                            </Link>
-                                        </div>
-                                    </div>
-
+                                    {/*<div className="option-item">*/}
+                                    {/*    <div className="cart-btn">*/}
+                                    {/*        <Link href="/cart">*/}
+                                    {/*            <a><i className='flaticon-shopping-cart'></i> <span>3</span></a>*/}
+                                    {/*        </Link>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
+                                    {user != undefined || user != null ?
                                     <div className="option-item">
                                         {userType === 1 ? (
                                             <div className="user-dropdown">
                                                 <Link href="/">
                                                     <a onClick={e => e.preventDefault()} className="default-btn">
-                                                        <i className="flaticon-user"></i> {user.name} <span></span>
+                                                       <i className="flaticon-user"></i> {user.name} <span></span>
                                                     </a>
                                                 </Link>
 
@@ -375,8 +401,7 @@ const Navbar = ({user, ...props}) => {
                                                             <a
                                                                 className="nav-link"
                                                                 onClick={e => {
-                                                                    e.preventDefault();
-                                                                    handleLogout()
+                                                                    logout()
                                                                 }}
                                                             >
                                                                 Logout
@@ -393,6 +418,7 @@ const Navbar = ({user, ...props}) => {
                                             </Link>
                                         )}
                                     </div>
+                                        :null }
                                 </div>
                             </div>
                         </div>
