@@ -12,11 +12,11 @@ const Footer = () => {
                         <div className="single-footer-widget">
                             <Link href="/">
                                 <a className="logo">
-                                    <img width={200} src="/images/logo.png" alt="logo" />
+                                    <img width={200} src="/images/logo-2.png" alt="logo" />
                                 </a>
                             </Link>
 
-                            <p>Working to bring significant changes in online-based learning by doing extensive research for course curriculum preparation, student engagements, and looking forward to the flexible education!</p>
+                            {/*<p>Working to bring significant changes in online-based learning by doing extensive research for course curriculum preparation, student engagements, and looking forward to the flexible education!</p>*/}
 
                             <ul className="social-link">
                                 <li>
@@ -58,7 +58,7 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/courses-1">
+                                    <Link href="/courses-2">
                                         <a>Courses</a>
                                     </Link>
                                 </li>
@@ -76,62 +76,62 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-2 col-md-6 col-sm-6">
-                        <div className="single-footer-widget">
-                            <h3>Resources</h3>
-                            <ul className="footer-links-list">
-                                <li>
-                                    <Link href="#">
-                                        <a>Student Success</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#">
-                                        <a>Scholarships</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#">
-                                        <a>For Business</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#">
-                                        <a>Go Premium</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#">
-                                        <a>Team Plans</a>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    {/*<div className="col-lg-2 col-md-6 col-sm-6">*/}
+                    {/*    <div className="single-footer-widget">*/}
+                    {/*        <h3>Resources</h3>*/}
+                    {/*        <ul className="footer-links-list">*/}
+                    {/*            <li>*/}
+                    {/*                <Link href="#">*/}
+                    {/*                    <a>Student Success</a>*/}
+                    {/*                </Link>*/}
+                    {/*            </li>*/}
+                    {/*            <li>*/}
+                    {/*                <Link href="#">*/}
+                    {/*                    <a>Scholarships</a>*/}
+                    {/*                </Link>*/}
+                    {/*            </li>*/}
+                    {/*            <li>*/}
+                    {/*                <Link href="#">*/}
+                    {/*                    <a>For Business</a>*/}
+                    {/*                </Link>*/}
+                    {/*            </li>*/}
+                    {/*            <li>*/}
+                    {/*                <Link href="#">*/}
+                    {/*                    <a>Go Premium</a>*/}
+                    {/*                </Link>*/}
+                    {/*            </li>*/}
+                    {/*            <li>*/}
+                    {/*                <Link href="#">*/}
+                    {/*                    <a>Team Plans</a>*/}
+                    {/*                </Link>*/}
+                    {/*            </li>*/}
+                    {/*        </ul>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
 
-                    <div className="col-lg-4 col-md-6 col-sm-6">
-                        <div className="single-footer-widget">
-                            <h3>Address</h3>
-                            <ul className="footer-contact-info">
-                                {/*<li>*/}
-                                {/*    <i className='bx bx-map'></i> */}
-                                {/*    2750 Quadra Street Golden Victoria Road, New York, USA*/}
-                                {/*</li>*/}
-                                <li>
-                                    <i className='bx bx-phone-call'></i> 
-                                    <a href="tel:+44587154756">+94 77 456 7890</a>
-                                </li>
-                                <li>
-                                    <i className='bx bx-envelope'></i> 
-                                    <a href="mailto:hello@edemy.com">edulabmarketplace@gamil.com</a>
-                                </li>
-                                <li>
-                                    <i className='bx bxs-inbox'></i> 
-                                    <a href="tel:+557854578964">+94 77 456 7890</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    {/*<div className="col-lg-4 col-md-6 col-sm-6">*/}
+                    {/*    <div className="single-footer-widget">*/}
+                    {/*        <h3>Address</h3>*/}
+                    {/*        <ul className="footer-contact-info">*/}
+                    {/*            /!*<li>*!/*/}
+                    {/*            /!*    <i className='bx bx-map'></i> *!/*/}
+                    {/*            /!*    2750 Quadra Street Golden Victoria Road, New York, USA*!/*/}
+                    {/*            /!*</li>*!/*/}
+                    {/*            /!*<li>*!/*/}
+                    {/*            /!*    <i className='bx bx-phone-call'></i> *!/*/}
+                    {/*            /!*    <a href="tel:+44587154756">+94 77 456 7890</a>*!/*/}
+                    {/*            /!*</li>*!/*/}
+                    {/*            /!*<li>*!/*/}
+                    {/*            /!*    <i className='bx bx-envelope'></i> *!/*/}
+                    {/*            /!*    <a href="mailto:hello@edemy.com">edulabmarketplace@gamil.com</a>*!/*/}
+                    {/*            /!*</li>*!/*/}
+                    {/*            /!*<li>*!/*/}
+                    {/*            /!*    <i className='bx bxs-inbox'></i> *!/*/}
+                    {/*            /!*    <a href="tel:+557854578964">+94 77 456 7890</a>*!/*/}
+                    {/*            /!*</li>*!/*/}
+                    {/*        </ul>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
 
                 <div className="footer-bottom-area">
