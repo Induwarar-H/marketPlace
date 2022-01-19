@@ -6,6 +6,8 @@ import * as constants from "../../const/constants";
 import {lang, language} from "../../const/language";
 import {useRouter} from 'next/router'
 import PaymentModal from '../../components/Models/payment/paymentModal'
+import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
+import * as commonFunc from "@/utils/commonFunc";
 
 const ModalVideo = dynamic(import("react-modal-video"));
 
@@ -27,9 +29,7 @@ const StaticCoursesDetailsSidebar = (props) => {
     };
 
     const viewModel = async (value) => {
-        console.log('course Payment')
-        await  setPaymentView(true);
-        await console.log(paymentView)
+        await setPaymentView(value);
     };
 
     const signInAgain = () => {
@@ -37,59 +37,68 @@ const StaticCoursesDetailsSidebar = (props) => {
     };
 
     const buyThisCourse = () => {
+        let obj = {
+            "courseId": props.courseDetails.id,
+            "studentId": 1,
+            "promoCode": " "
+        }
+
         console.log(userType)
-        // if (userType === 1) {
-        swal({
-            title: constants.ALERT_TEXT,
-            icon: null,
-            closeOnClickOutside: false,
-            buttons: {
-                cancel: language[lang].NoText,
-                dangerMode: {
-                    text: language[lang].YesText,
-                    value: "action",
-                    className: "okay-btn"
+        if (userType === 1) {
+            swal({
+                title: constants.ALERT_TEXT,
+                icon: null,
+                closeOnClickOutside: false,
+                buttons: {
+                    cancel: language[lang].NoText,
+                    dangerMode: {
+                        text: language[lang].YesText,
+                        value: "action",
+                        className: "okay-btn"
+                    }
+                },
+            }).then((value) => {
+                switch (value) {
+                    case "action":
+                        viewModel(true);
+                        //  commonFunc.submitHandler(obj);
+                        break;
+                    default:
+                        break;
                 }
-            },
-        }).then((value) => {
-            switch (value) {
-                case "action":
-                    viewModel(true);
-                    break;
-                default:
-                    break;
-            }
-        });
-        // } else {
-        //
-        //     swal({
-        //         title: language[lang].StudentSignInWarning4,
-        //         icon: null,
-        //         closeOnClickOutside: false,
-        //         buttons: {
-        //             cancel: language[lang].NotNowText,
-        //             dangerMode: {
-        //                 text: language[lang].OkayText,
-        //                 value: "action",
-        //                 className: "okay-btn"
-        //             }
-        //         },
-        //     }).then((value) => {
-        //         switch (value) {
-        //             case "action":
-        //                 signInAgain();
-        //                 break;
-        //             default:
-        //                 break;
-        //         }
-        //     });
-        // }
+            });
+        } else {
+
+            swal({
+                title: language[lang].StudentSignInWarning4,
+                icon: null,
+                closeOnClickOutside: false,
+                buttons: {
+                    cancel: language[lang].NotNowText,
+                    dangerMode: {
+                        text: language[lang].OkayText,
+                        value: "action",
+                        className: "okay-btn"
+                    }
+                },
+            }).then((value) => {
+                switch (value) {
+                    case "action":
+                        signInAgain();
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
     };
-    console.log("staticSideBar",props.courseDetails)
+    console.log("staticSideBar", props.courseDetails)
+
+
     return (
         <React.Fragment>
-            {paymentView? <PaymentModal/>: null}
 
+            <PaymentModal showModal={paymentView} closeView={viewModel} courseDetails={props.courseDetails}/>
             {display ? (
                 <ModalVideo
                     channel="youtube"
@@ -133,7 +142,7 @@ const StaticCoursesDetailsSidebar = (props) => {
 							<span>
 								<i className="flaticon-teacher"></i> Instructor
 							</span>
-                         {props.courseDetails.teacher.name}
+                            {props.courseDetails.teacher.name}
                         </div>
                     </li>
                     <li>

@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import PageBanner from "@/components/SingleCourses/PageBanner";
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import StaticCoursesDetailsSidebar from "@/components/SingleCourses/StaticCoursesDetailsSidebar";
-import YouMightLikeTheCourses from "@/components/Courses/YouMightLikeTheCourses";
 import * as courseService from "../../services/course";
 import * as commonFunc from "@/utils/commonFunc";
 import Cookies from "js-cookie";
@@ -423,7 +422,7 @@ const CourseDetails = ({courseCardView}) => {
                 </div>:null
             }
 
-            <YouMightLikeTheCourses/>
+
         </React.Fragment>
     )
 }

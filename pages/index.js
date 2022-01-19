@@ -34,8 +34,8 @@ const Index = ({courses, props}) => {
             <Features/>
             {/*<Partner/>*/}
             <Instance/>
-            <Ad/>
-            <Funfacts/>
+            {/*<Ad/>*/}
+            {/*<Funfacts/>*/}
             {/*<Blog />*/}
             <EdemyPremium userType={userType}/>
         </React.Fragment>

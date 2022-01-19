@@ -12,7 +12,8 @@ import '../styles/responsive.css'
 import '../styles/authentication.scss'
 import '../components/Authentication/authentication.css'
 import '../pages/style-pages/courseTile.scss'
-import '../pages/courseTile/selectedCourseView.scss'
+import './courseTile/selectedCourseView.scss'
+import '../components/Models/payment/PaymentModal.scss'
 // If you want RTL style, comment out below line
 // import '../styles/rtl.css'
 

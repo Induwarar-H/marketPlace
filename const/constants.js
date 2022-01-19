@@ -25,4 +25,14 @@ export const EXPIRED_TEXT = 'language[lang].SessionExpireNote';
 export const PASSWORD_TEXT = language[lang].PasswordText;
 export const ALERT_TEXT = language[lang].AreYouSureYouWantToProceed;
 export const ALERT_TEXT_CourseBuy = language[lang].courseBuyMsg;
+export const GUEST_STUDENT_FOR_PURCHASE = language[lang].StudentSignInWarning;
+
+
+export const SLIP_TYPE = 'SLIP';
+export const CARD_TYPE = 'CARD';
+
+export const BOUGHT_TEXT = "BOUGHT";
+export const BUY_TEXT = "BUY";
+export const PENDING_TEXT = "PENDING";
+export const RE_BUY_TEXT = "REPAY";
 

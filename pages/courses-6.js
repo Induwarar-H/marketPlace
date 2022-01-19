@@ -2,7 +2,6 @@ import React from 'react';
 // import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Link from 'next/link';
-import CoursesSidebar from '../components/Courses/CoursesSidebar';
 // import Footer from '../components/_App/Footer';
 
 import CourseCardView from './courseTile/courseCardView'
@@ -46,7 +45,7 @@ const CoursesRightSidebar = () => {
                         </div>
 
                         <div className="col-lg-4 col-md-12">
-                            <CoursesSidebar />
+
                         </div>
                     </div>
                 </div>
