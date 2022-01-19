@@ -10,6 +10,9 @@ import * as constants from "../const/constants";
 import Cookies from "js-cookie";
 import toastr from 'toastr';
 import swal from "sweetalert";
+import {lang, language} from "../const/language";
+import * as courseService from '../services/course'
+import Router from "next/router";
 
 
 export const removeCookiesValues = async () => {
@@ -49,3 +52,30 @@ export const notifyMessage = (msg, type, duration) => {
     };
     toastr[msgType](msg === undefined || msg === null ? "Please enter correct details" : msg, type === 0 ? 'Error' : type === 1 ? 'Success' : 'Warning')
 };
+
+export function readFile(file) {
+    return new Promise(resolve => {
+        const reader = new FileReader();
+        reader.addEventListener("load", () => resolve(reader.result), false);
+        reader.readAsDataURL(file);
+    });
+}
+
+export const submitHandler = async (obj) => {
+    console.log(obj);
+    let user = JSON.parse(localStorage.getItem("User"))
+    console.log('user', user)
+    let data = {
+        "courseId": obj.courseId,
+        "studentId": user.id,
+        "promoId": obj.promoCodeId === "" ? 0 : obj.promoCodeId
+    };
+    console.log(data);
+    courseService.initCardPayment(data).then(res => {
+        console.log(res.body)
+
+        Router.push(res.body.payUrl)
+    })
+};
+
+
