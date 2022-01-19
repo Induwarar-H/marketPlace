@@ -12,10 +12,10 @@ const RegisterForm = ({ user }) => {
     const { addToast } = useToasts()
 
     const INIT_APPLY = {
-        name: user.name,
-        email: user.email,
-        number: user.phone,
-        subject: "Becaome A Teacher!",
+        name: '',
+        email: '',
+        number: '',
+        subject: "",
         as_teacher_apply: true,
         as_teacher_req_desc: '',
     }

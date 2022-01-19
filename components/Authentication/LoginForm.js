@@ -58,7 +58,7 @@ class LoginForm extends React.Component {
                 Cookies.set(constants.ACCESS_TOKEN, response.access_token);
                 Cookies.set(constants.REFRESH_TOKEN, response.refresh_token);
                 Cookies.set(constants.VERIFY_CODE, response.verify_code);
-                console.log(response.user.userDetails)
+
                 let details = response.user.userDetails
                 localStorage.setItem("User", JSON.stringify(details));
                 // this.props.userDetailsHandler(response.user.userDetails);
