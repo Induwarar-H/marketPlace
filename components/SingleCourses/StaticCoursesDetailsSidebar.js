@@ -15,12 +15,17 @@ const StaticCoursesDetailsSidebar = (props) => {
     const router = useRouter()
     const [display, setDisplay] = React.useState(false);
     const [paymentView, setPaymentView] = React.useState(false);
+    const [videoUrl, setVideoUrl] = React.useState('');
     const [userType, setUserType] = React.useState();
 
 
     React.useEffect(() => {
         setDisplay(true);
         setUserType(props.userType);
+        let url = props.courseDetails.previewVideoUrl;
+        const myArray = url.split("/");
+        setVideoUrl(myArray[2])
+
     }, []);
     // Popup Video
     const [isOpen, setIsOpen] = React.useState(true);
@@ -41,9 +46,8 @@ const StaticCoursesDetailsSidebar = (props) => {
             "courseId": props.courseDetails.id,
             "studentId": 1,
             "promoCode": " "
-        }
+        };
 
-        console.log(userType)
         if (userType === 1) {
             swal({
                 title: constants.ALERT_TEXT,
@@ -96,137 +100,146 @@ const StaticCoursesDetailsSidebar = (props) => {
 
 
     return (
-        <React.Fragment>
+        props.courseDetails ?
 
-            <PaymentModal showModal={paymentView} closeView={viewModel} courseDetails={props.courseDetails}/>
-            {display ? (
-                <ModalVideo
-                    channel="youtube"
-                    isOpen={!isOpen}
-                    videoId="bk7McNUjWgw"
-                    onClose={() => setIsOpen(!isOpen)}
-                />
-            ) : (
-                ""
-            )}
+            <React.Fragment>
 
-            <div className="courses-details-info">
-                <div className="image">
-                    <img src="/images/courses/courses1.jpg" alt="image"/>
+                <PaymentModal showModal={paymentView} closeView={viewModel} courseDetails={props.courseDetails}/>
+                {display ? (
+                    <ModalVideo
+                        channel="vimeo"
+                        isOpen={!isOpen}
+                        videoId={videoUrl}
+                        onClose={() => setIsOpen(!isOpen)}
+                    />
+                ) : (
+                    ""
+                )}
 
-                    <div
-                        onClick={(e) => {
-                            e.preventDefault();
-                            openModal();
-                        }}
-                        className="link-btn popup-youtube"
-                    ></div>
+                <div className="courses-details-info">
+                    <div className="image">
+                        <img src="/images/courses/courses1.jpg" alt="image"/>
 
-                    <div className="content">
-                        <i className="flaticon-play"></i>
-                        <span>Course Preview</span>
+                        <div
+                            onClick={(e) => {
+                                e.preventDefault();
+                                openModal();
+                            }}
+                            className="link-btn popup-youtube"
+                        ></div>
+
+                        <div className="content">
+                            <i className="flaticon-play"></i>
+                            <span>Course Preview</span>
+                        </div>
                     </div>
-                </div>
 
-                <ul className="info">
-                    <li className="price">
-                        <div className="d-flex justify-content-between align-items-center">
+                    <ul className="info">
+                        <li className="price">
+                            <div className="d-flex justify-content-between align-items-center">
 							<span>
 								<i className="flaticon-tag"></i> Price
 							</span>
-                            {props.courseDetails.fee}
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
+                                {props.courseDetails.fee}
+                            </div>
+                        </li>
+                        <li>
+                            <div className="d-flex justify-content-between align-items-center">
 							<span>
 								<i className="flaticon-teacher"></i> Instructor
 							</span>
-                            {props.courseDetails.teacher.name}
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
+                                <p style={{textAlign: 'right'}}> {props.courseDetails.teacher.name} </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="d-flex justify-content-between align-items-center">
 							<span>
 								<i className="flaticon-time"></i> Duration
 							</span>
-                            7 weeks
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
+                                7 weeks
+                            </div>
+                        </li>
+                        <li>
+                            <div className="d-flex justify-content-between align-items-center">
 							<span>
 								<i className="flaticon-distance-learning"></i>{" "}
                                 Lessons
 							</span>
-                            25
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
+                                25
+                            </div>
+                        </li>
+                        <li>
+                            <div className="d-flex justify-content-between align-items-center">
 							<span>
 								<i className="flaticon-web"></i> Enrolled
 							</span>
-                            255 students
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
+                                255 students
+                            </div>
+                        </li>
+                        <li>
+                            <div className="d-flex justify-content-between align-items-center">
 							<span>
 								<i className="flaticon-lock"></i> Access
 							</span>
-                            {props.courseDetails.courseAccess}
-                        </div>
-                    </li>
-                </ul>
+                                {props.courseDetails.courseAccess}
+                            </div>
+                        </li>
+                    </ul>
 
-                <div className="btn-box">
-                    <Link href="#">
-                        <a className="default-btn">
-                            <i className="flaticon-shopping-cart"></i> Add to
-                            Cart <span></span>
-                        </a>
-                    </Link>
-                    <div style={{marginTop: '10px'}} onClick={buyThisCourse}>
-                        <a className="default-btn">
-                            <i className="flaticon-tag"></i> Buy Now{" "}
-                            <span></span>
-                        </a>
+                    <div className="btn-box">
+                        {/*<Link href="#">*/}
+                        {/*    <a className="default-btn">*/}
+                        {/*        <i className="flaticon-shopping-cart"></i> Add to*/}
+                        {/*        Cart <span></span>*/}
+                        {/*    </a>*/}
+                        {/*</Link>*/}
+                        {props.courseDetails.coursePaymentType !== "PAID" ?
+                        <div style={{marginTop: '10px'}} onClick={buyThisCourse}>
+                            <a className="default-btn">
+                                <i className="flaticon-tag"></i> Buy Now{" "}
+                                <span></span>
+                            </a>
+                        </div>:
+                            <a aria-disabled="true" className="default-btn">
+                                <i className="flaticon-tag"></i> You Paid for this Course{" "}
+                                <span></span>
+                            </a>
+                        }
+
                     </div>
-                </div>
 
-                <div className="courses-share">
-                    <div className="share-info">
+                    <div className="courses-share">
+                        <div className="share-info">
 						<span>
 							Share This Course <i className="flaticon-share"></i>
 						</span>
 
-                        <ul className="social-link">
-                            <li>
-                                <a href="#" className="d-block" target="_blank">
-                                    <i className="bx bxl-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="d-block" target="_blank">
-                                    <i className="bx bxl-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="d-block" target="_blank">
-                                    <i className="bx bxl-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="d-block" target="_blank">
-                                    <i className="bx bxl-linkedin"></i>
-                                </a>
-                            </li>
-                        </ul>
+                            <ul className="social-link">
+                                <li>
+                                    <a href="#" className="d-block" target="_blank">
+                                        <i className="bx bxl-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="d-block" target="_blank">
+                                        <i className="bx bxl-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="d-block" target="_blank">
+                                        <i className="bx bxl-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="d-block" target="_blank">
+                                        <i className="bx bxl-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </React.Fragment>
+            </React.Fragment> : null
     );
 };
 

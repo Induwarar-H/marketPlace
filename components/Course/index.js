@@ -1,12 +1,9 @@
-import React, {useEffect} from 'react';
-// import Navbar from '../components/_App/Navbar';
-import PageBanner from '../components/Common/PageBanner';
-import Link from 'next/link';
-import CourseDetails from "../components/CourseDetails/CourseDetails";
-import * as courseService from "../services/course";
-// import Footer from '../components/_App/Footer';
+import React, {useEffect} from "react";
+import PageBanner from "@/components/Common/PageBanner";
+import CourseDetails from "@/components/CourseDetails/CourseDetails";
+import * as courseService from "../../services/course";
 
-const CoursesGrid02 = () => {
+const Course = () => {
     const [courses, setCourses] = React.useState(null);
 
     useEffect(() => {
@@ -22,9 +19,7 @@ const CoursesGrid02 = () => {
             console.log(err)
         })
     };
-
-
-    return (
+   return (
         <React.Fragment>
             {courses ?
                 <PageBanner
@@ -69,6 +64,6 @@ const CoursesGrid02 = () => {
             {/* <Footer /> */}
         </React.Fragment>
     )
-}
+};
 
-export default CoursesGrid02;
+export default Course;

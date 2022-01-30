@@ -255,7 +255,9 @@ a {
 .text-center {
     text-align: center;
 }
-
+.backgroundLogin{
+    background-image: url("../public/images/newImages/Online Course.png")
+}
 /* section-title */
 .section-title {
     text-align: center;
@@ -15773,7 +15775,7 @@ button {
     text-align: center;
 }
 
-/* Course video list */
+/* Index video list */
 .course-video-list {
     height: 600px;
     overflow-y: auto;

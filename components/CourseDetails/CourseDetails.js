@@ -1,14 +1,16 @@
 import React from 'react'
 import Link from "next/link";
 import * as courseService from '../../services/course'
-import Router, { withRouter } from 'next/router'
+ import Router, { withRouter } from 'next/router'
 
-class courseCardView extends React.Component {
+
+class courseDetails extends React.Component {
     state = {
         course: []
     };
 
     async componentDidMount() {
+        console.log('here Print')
         await this.fetchCourse();
     }
 
@@ -30,7 +32,7 @@ class courseCardView extends React.Component {
     navigateToSelectedCourse = (id)=>{
         console.log(id)
         Router.push(`/courseTile/${id}`)
-    }
+    };
 
     render() {
 
@@ -42,7 +44,7 @@ class courseCardView extends React.Component {
 
                         <div className="single-courses-box without-boxshadow">
                             <div className="courses-image">
-                                <div onClick={()=>{this.navigateToSelectedCourse(course.id)}} >
+                                <Link href={`CourseDetails/${course.id}`}>
                                     <div align="center" className="display-inline">
                                         <img src={course.imageUrl} alt={"."}
                                              className="blur-img"
@@ -51,7 +53,7 @@ class courseCardView extends React.Component {
                                              className="slideshow-pro-image shadow"
                                         />
                                     </div>
-                                </div>
+                                </Link>
                                 <a href="#" className="fav">
                                     <i className="flaticon-heart"></i>
                                 </a>
@@ -64,10 +66,10 @@ class courseCardView extends React.Component {
                                 </div>
 
                                 <h3>
-                                    <div onClick={()=>{this.navigateToSelectedCourse(course.id)}} >
+                                    <Link href={`CourseDetails/${course.id}`} >
                                         <a>{course.name}
                                         </a>
-                                    </div>
+                                    </Link>
                                 </h3>
 
                                 {/*<p style={{textOverflow:'ellipsis',overflow: "hidden",whiteSpace:'nowrap'}}>{course.description} </p>*/}
@@ -90,5 +92,5 @@ class courseCardView extends React.Component {
     }
 }
 
-export default courseCardView
+export default courseDetails
 

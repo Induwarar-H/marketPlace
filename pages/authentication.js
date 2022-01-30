@@ -27,7 +27,7 @@ class Authentication extends React.Component {
                     activePageText="Authentication"
                 />
 
-                <div className="profile-authentication-area ptb-100">
+                <div className="profile-authentication-area ptb-100 backgroundLogin">
                     <div className="container authentication">
                         <div className='row'>
                             <div className="col-2"></div>

@@ -228,8 +228,16 @@ const Navbar = ({user, ...props}) => {
                                     {/*</li>*/}
 
 
+                                    {/*<li className="nav-item">*/}
+                                    {/*    <Link  href="/courses-2" as="courses">*/}
+                                    {/*        <a className="nav-link">*/}
+                                    {/*            Courses*/}
+                                    {/*        </a>*/}
+                                    {/*    </Link>*/}
+                                    {/*</li>*/}
+
                                     <li className="nav-item">
-                                        <Link  href="/courses-2" as="courses">
+                                        <Link  href="/courseView">
                                             <a className="nav-link">
                                                 Courses
                                             </a>
@@ -369,7 +377,7 @@ const Navbar = ({user, ...props}) => {
 
                                                 <ul className="dropdown-menu">
                                                     <li className="nav-item">
-                                                        <Link href="/my-courses" activeClassName="active">
+                                                        <Link href="/myCoursesView" activeClassName="active">
                                                             <a onClick={toggleNavbar} className="nav-link">My
                                                                 Courses</a>
                                                         </Link>

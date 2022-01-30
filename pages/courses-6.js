@@ -4,7 +4,7 @@ import PageBanner from '../components/Common/PageBanner';
 import Link from 'next/link';
 // import Footer from '../components/_App/Footer';
 
-import CourseCardView from './courseTile/courseCardView'
+import CourseDetails from '../components/CourseDetails/CourseDetails'
 
 const CoursesRightSidebar = () => {
     return (
@@ -40,7 +40,7 @@ const CoursesRightSidebar = () => {
                             </div>
 
                             <div className="row">
-                                <CourseCardView/>
+                                <CourseDetails/>
                             </div>
                         </div>
 

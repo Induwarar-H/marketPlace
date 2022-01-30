@@ -16,6 +16,7 @@ import Cookies from "js-cookie";
 import * as constants from "../const/constants";
 
 const Index = ({courses, props}) => {
+
     const [userType, setUserType] = React.useState(0);
     useEffect(() => {
         let access_token = Cookies.get(constants.ACCESS_TOKEN);
@@ -23,8 +24,6 @@ const Index = ({courses, props}) => {
         setUserType(userType);
 
     }, []);
-
-
     return (
         <React.Fragment>
             <MainBanner/>
@@ -34,19 +33,19 @@ const Index = ({courses, props}) => {
             <Features/>
             {/*<Partner/>*/}
             <Instance/>
-            {/*<Ad/>*/}
-            {/*<Funfacts/>*/}
-            {/*<Blog />*/}
+            <Ad/>
+            <Funfacts/>
+            <Blog />
             <EdemyPremium userType={userType}/>
         </React.Fragment>
     )
-}
+};
 
-Index.getInitialProps = async () => {
+Index.getInitialProps = async (context) => {
+    console.log('in page Index context',context)
     const url = `${baseUrl}/api/v1/courses/homepage-courses`
     const response = await axios.get(url)
-    // console.log(response)
     return response.data
-}
+};
 
 export default Index
