@@ -11,7 +11,7 @@ module.exports = (sequelize, Sequelize) => {
          */
         // static associate(models) {
         //     // define association here
-        //     Course.belongsTo(models.User, {
+        //     Index.belongsTo(models.User, {
         //         foreignKey: 'userId',
         //         onDelete: 'CASCADE'
         //     });
@@ -50,9 +50,6 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING
         },
         course_preview_video: {
-            type: Sequelize.STRING
-        },
-        duration: {
             type: Sequelize.STRING
         },
         duration: {

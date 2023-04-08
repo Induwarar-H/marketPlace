@@ -12,7 +12,7 @@ export async function loadAllCourses(token) {
 export async function getCourseDetailsById(id) {
     const apiObject = {};
     apiObject.method = 'GET';
-    apiObject.authentication = false;
+    apiObject.authentication = true;
     apiObject.endpoint = 'student/public/course/' + id;
     apiObject.body = null;
     return await ApiService.callApi(apiObject);
@@ -40,7 +40,7 @@ export async function completeCardPayment(data) {
     const apiObject = {};
     apiObject.method = 'POST';
     apiObject.authentication = true;
-    apiObject.endpoint = `student/courses/payment/card/complete`;
+    apiObject.endpoint = `student/course/payment/card/complete`;
     apiObject.body = data;
     return await ApiService.callApi(apiObject);
 }
@@ -48,7 +48,7 @@ export async function completeCardPayment(data) {
 export async function getPaidCourses() {
     const apiObject = {};
     apiObject.method = 'GET';
-    apiObject.endpoint = 'student/course/paid/courses/';
+    apiObject.endpoint = 'student/course/paid/courses';
     apiObject.authentication = true;
     apiObject.body = null;
     return await ApiService.callApi(apiObject);

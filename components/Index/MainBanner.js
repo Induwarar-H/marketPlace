@@ -14,14 +14,14 @@ class MainBanner extends React.Component {
     }
 
     render() {
-        console.log(this.state.userType)
         return (
             <div className="main-banner-area">
                 <div className="container-fluid">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12">
                             <div className="main-banner-content-style-two">
-                                <h1>No Limits for Learning with Edulab</h1>
+                                <h1>No Limits for Learning with
+                                    Test Edulab</h1>
                                 <p>Shouldn't limit your expectation <br/>
                                     Start you online learning  Complete a variety of courses online as you need and earn your certificate.
                                 </p>
@@ -35,7 +35,7 @@ class MainBanner extends React.Component {
                         </div>
                         <div className="col-lg-6 col-md-12">
                             <div className="main-banner-image-style-two">
-                                <img width={800} src="/images/banner-img4.png" alt="image" />
+                                <img width={800} src="/images/newImages/Online%20Course.png" alt="image" />
                             </div>
                         </div>
                     </div>

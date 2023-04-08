@@ -365,13 +365,13 @@ const Navbar = ({user, ...props}) => {
                                     {/*        </Link>*/}
                                     {/*    </div>*/}
                                     {/*</div>*/}
-                                    {user != undefined || user != null ?
+                                    {/*{user != undefined || user != null ?*/}
                                     <div className="option-item">
                                         {userType === 1 ? (
                                             <div className="user-dropdown">
                                                 <Link href="/">
                                                     <a onClick={e => e.preventDefault()} className="default-btn">
-                                                       <i className="flaticon-user"></i> {user.name} <span></span>
+                                                       {/*<i className="flaticon-user"></i> {user.name} <span></span>*/}
                                                     </a>
                                                 </Link>
 
@@ -426,7 +426,7 @@ const Navbar = ({user, ...props}) => {
                                             </Link>
                                         )}
                                     </div>
-                                        :null }
+                                        {/*:null }*/}
                                 </div>
                             </div>
                         </div>

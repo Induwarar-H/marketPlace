@@ -22,8 +22,7 @@ const CoursesGrid02 = () => {
             console.log(err)
         })
     };
-
-
+    
     return (
         <React.Fragment>
             {courses ?
@@ -34,17 +33,17 @@ const CoursesGrid02 = () => {
                     activePageText="Best Courses"
                 />
                 :   <PageBanner
-                    pageTitle="Sorry! we can't find any Course"
+                    pageTitle="Loading .."
                     homePageUrl="/"
                     homePageText="Home"
-                    activePageText="Sorry! we can't find any Course"
+                    activePageText="Loading .."
                 />}
             {courses ?
                 <div className="courses-area courses-section pt-100 pb-70">
                     <div className="container">
                         <div className="edemy-grid-sorting row align-items-center">
                             <div className="col-lg-8 col-md-6 result-count">
-                                <p>We found <span className="count">{courses.length}</span> courses available for you</p>
+                                {/*<p>We found <span className="count">{courses.length}</span> courses available for you !!!</p>*/}
                             </div>
 
                             <div className="col-lg-4 col-md-6 ordering">

@@ -13,9 +13,9 @@ class MyCourses extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="row">
                 {this.props.paidCourses.map((course,index)=>
-                    <div className="col-lg-4 col-md-6 courseTile" key={course.id}>
+                    <div className="col-lg-4 col-md-4 courseTile" key={course.id}>
 
                         <div className="single-courses-box without-boxshadow">
                             <div className="courses-image">

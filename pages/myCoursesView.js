@@ -69,7 +69,7 @@ class MyCoursesView extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="row">
+                            <div >
                                        <MyCourses paidCourses={paidCourses}/>
 
                             </div>

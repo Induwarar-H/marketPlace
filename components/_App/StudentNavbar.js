@@ -98,7 +98,7 @@ const StudentNavbar = ({ user }) => {
                                             <div className="user-dropdown">
                                                 <Link href="/">
                                                     <a onClick={e => e.preventDefault()} className="default-btn">
-                                                        <i className="flaticon-user"></i> {user.name} <span></span>
+                                                        {/*<i className="flaticon-user"></i> {user.name} <span></span>*/}
                                                     </a>
                                                 </Link>
  

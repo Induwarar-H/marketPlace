@@ -3,16 +3,16 @@
 
   .blur-img {
     height: 400px !important;
-    zoom: 1.2  !important;
-    border-radius: 10px  !important;
-    position: absolute  !important;
-    width: 100%  !important;
-    object-fit: cover  !important;
-    filter: blur(21)!important ;
-    -webkit-filter: blur(5px) brightness(100%)  !important;
-    filter: blur(5px) brightness(100%)  !important;
-    z-index: 0  !important;
-    opacity: 0.6  !important;
+    zoom: 1.2 !important;
+    border-radius: 10px !important;
+    position: absolute !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    filter: blur(21) !important;
+    -webkit-filter: blur(5px) brightness(100%) !important;
+    filter: blur(5px) brightness(100%) !important;
+    z-index: 0 !important;
+    opacity: 0.6 !important;
   }
 
   .slideshow-pro-image {
@@ -26,4 +26,35 @@
     object-fit: contain;
     z-index: 1;
   }
+
+  .detailsList {
+    li {
+      list-style-type: none;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin-right: 2rem;
+      padding-bottom: 5px;
+      border-bottom: #efeff1 2px solid;
+    }
+
+    li > div > span {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    li > div > span > i {
+      color: #fe6722;
+    }
+
+    li > a > i {
+      justify-content: center;
+      text-align: center;
+      padding-left:70px;
+    }
+
+    .buy-btn {
+      width: 100%;
+    }
+  }
+
 }

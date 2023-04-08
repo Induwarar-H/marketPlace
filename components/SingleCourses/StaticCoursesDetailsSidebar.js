@@ -1,13 +1,11 @@
 import React from "react";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import swal from "sweetalert";
 import * as constants from "../../const/constants";
 import {lang, language} from "../../const/language";
 import {useRouter} from 'next/router'
 import PaymentModal from '../../components/Models/payment/paymentModal'
-import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
-import * as commonFunc from "@/utils/commonFunc";
+
 
 const ModalVideo = dynamic(import("react-modal-video"));
 
@@ -96,25 +94,11 @@ const StaticCoursesDetailsSidebar = (props) => {
             });
         }
     };
-    console.log("staticSideBar", props.courseDetails)
-
 
     return (
-        props.courseDetails ?
-
             <React.Fragment>
-
                 <PaymentModal showModal={paymentView} closeView={viewModel} courseDetails={props.courseDetails}/>
-                {display ? (
-                    <ModalVideo
-                        channel="vimeo"
-                        isOpen={!isOpen}
-                        videoId={videoUrl}
-                        onClose={() => setIsOpen(!isOpen)}
-                    />
-                ) : (
-                    ""
-                )}
+
 
                 <div className="courses-details-info">
                     <div className="image">
@@ -140,7 +124,7 @@ const StaticCoursesDetailsSidebar = (props) => {
 							<span>
 								<i className="flaticon-tag"></i> Price
 							</span>
-                                {props.courseDetails.fee}
+                                {/*{props.courseDetails.fee}*/}
                             </div>
                         </li>
                         <li>
@@ -148,7 +132,7 @@ const StaticCoursesDetailsSidebar = (props) => {
 							<span>
 								<i className="flaticon-teacher"></i> Instructor
 							</span>
-                                <p style={{textAlign: 'right'}}> {props.courseDetails.teacher.name} </p>
+                                {/*<p style={{textAlign: 'right'}}> {props.courseDetails.teacher.name} </p>*/}
                             </div>
                         </li>
                         <li>
@@ -181,7 +165,7 @@ const StaticCoursesDetailsSidebar = (props) => {
 							<span>
 								<i className="flaticon-lock"></i> Access
 							</span>
-                                {props.courseDetails.courseAccess}
+                                {/*{props.courseDetails.courseAccess}*/}
                             </div>
                         </li>
                     </ul>
@@ -193,18 +177,18 @@ const StaticCoursesDetailsSidebar = (props) => {
                         {/*        Cart <span></span>*/}
                         {/*    </a>*/}
                         {/*</Link>*/}
-                        {props.courseDetails.coursePaymentType !== "PAID" ?
-                        <div style={{marginTop: '10px'}} onClick={buyThisCourse}>
+                        {/*{props.courseDetails.courseEnroll === null ?*/}
+                        {/*<div style={{marginTop: '10px'}} onClick={buyThisCourse}>*/}
                             <a className="default-btn">
                                 <i className="flaticon-tag"></i> Buy Now{" "}
                                 <span></span>
                             </a>
-                        </div>:
-                            <a aria-disabled="true" className="default-btn">
-                                <i className="flaticon-tag"></i> You Paid for this Course{" "}
-                                <span></span>
-                            </a>
-                        }
+                        {/*</div>:*/}
+                        {/*    <a aria-disabled="true" className="default-btn">*/}
+                        {/*        <i className="flaticon-tag"></i> You Paid for this Course{" "}*/}
+                        {/*        <span></span>*/}
+                        {/*    </a>*/}
+                        {/*}*/}
 
                     </div>
 
@@ -239,7 +223,7 @@ const StaticCoursesDetailsSidebar = (props) => {
                         </div>
                     </div>
                 </div>
-            </React.Fragment> : null
+            </React.Fragment>
     );
 };
 

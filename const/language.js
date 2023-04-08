@@ -94,7 +94,7 @@ export const language = {
         AreYouSureYouWantToProceedVideo: 'Watch Now? You will not be able to open the video if you reach the limit.',
         remaining: "your remaining view count: ",
         SessionExpireNote: 'Your session has expired. Please sign in again ...',
-        PasswordText: 'Password must contain at least 5 characters',
+        PasswordText: 'Password must contain at least 8 characters',
         cardPayment: '3% additional bank charges will be added to the card payment.',
         // --- view class ----------
         ViewClassText: 'View Class',
@@ -209,7 +209,7 @@ export const language = {
         OTP:'OTP Code',
         OTPVerify:'Verify Your OTP Code',
         courseBuyMsg:'Are you sure you want to purchase this course?',
-        getYourOTP:'Get Your OTP code'
+        getYourOTP:'Get Your OTP code',
     },
     SIN: {
 
@@ -301,7 +301,7 @@ export const language = {
         AreYouSureYouWantToProceedVideo: 'ඔබට ඉදිරියට යාමට අවශ්‍යද? මෙම වීඩියෝව සදහා ඇති නැරඹිය හැකි වාර ගණන ඉක්මවූ පසු නැරඹිය නොහැක.',
         remaining: 'ඔබට ඉතිරිවී ඇති වාර ගණන: ',
         SessionExpireNote: 'කරුණාකර නැවත ඔබගේ ගිණුමට login වෙන්න. (Please login again)',
-        PasswordText: 'මුරපදයේ අවම වශයෙන් අක්ෂර 5 ක්වත් තිබිය යුතුය.',
+        PasswordText: 'මුරපදයේ අවම වශයෙන් අක්ෂර 8 ක්වත් තිබිය යුතුය.',
         cardPayment: "කාඩ්පත් ගෙවීම් සදහා 3% අමතර බැංකු ගාස්තුවක් අය කරනු ලැබේ.",
 
         // --- view class ----------

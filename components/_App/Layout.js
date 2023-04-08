@@ -73,7 +73,7 @@ const Layout = ({children, user}) => {
 
                 {children}
 
-                <GoTop scrollStepInPx="100" delayInMs="10.50"/>
+                {/*<GoTop scrollStepInPx="100" delayInMs="10.50"/>*/}
 
                 <Footer/>
             </ToastProvider>

@@ -7,12 +7,15 @@ import Cookies from "js-cookie";
 import PageBanner from "@/components/SingleCourses/PageBanner";
 import StaticCoursesDetailsSidebar from "@/components/SingleCourses/StaticCoursesDetailsSidebar";
 import CourseSessionView from "@/components/CourseSections/CourseSessionView/CourseSessionView";
+import swal from "sweetalert";
+import {lang, language} from "../../const/language";
+import PaymentModal from "@/components/Models/payment/paymentModal";
 
 const CourseDetails = (props) => {
     const [courseId, setCourseId] = React.useState();
     const [userType, setUserType] = React.useState(0);
     const [courseDetails, setCourseDetails] = React.useState(null);
-    console.log(props)
+    const [paymentView, setPaymentView] = React.useState(false);
 
     useEffect(() => {
         setCourse();
@@ -42,9 +45,75 @@ const CourseDetails = (props) => {
             })
         }
     };
+
+    if (courseDetails !== null) {
+        console.log("if else check", courseDetails.name)
+    }
+    const viewModel = async (value) => {
+        await setPaymentView(value);
+    };
+
+    const buyThisCourse = () => {
+        let obj = {
+            "courseId": courseDetails.id,
+            "studentId": 1,
+            "promoCode": " "
+        };
+
+        if (userType === 1) {
+            swal({
+                title: constants.ALERT_TEXT,
+                icon: null,
+                closeOnClickOutside: false,
+                buttons: {
+                    cancel: language[lang].NoText,
+                    dangerMode: {
+                        text: language[lang].YesText,
+                        value: "action",
+                        className: "okay-btn"
+                    }
+                },
+            }).then((value) => {
+                switch (value) {
+                    case "action":
+                        viewModel(true);
+                        //  commonFunc.submitHandler(obj);
+                        break;
+                    default:
+                        break;
+                }
+            });
+        } else {
+
+            swal({
+                title: language[lang].StudentSignInWarning4,
+                icon: null,
+                closeOnClickOutside: false,
+                buttons: {
+                    cancel: language[lang].NotNowText,
+                    dangerMode: {
+                        text: language[lang].OkayText,
+                        value: "action",
+                        className: "okay-btn"
+                    }
+                },
+            }).then((value) => {
+                switch (value) {
+                    case "action":
+                        signInAgain();
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
+    };
+
+
     const testDesc = 'Text Desc,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque, consequatur, culpa dolores eligendi enim fuga iure labore minima nostrum obcaecati provident qui quis rem repudiandae sint soluta sunt unde.';
     return <div>
         <React.Fragment>
+
             {courseDetails ?
 
                 <PageBanner
@@ -65,7 +134,7 @@ const CourseDetails = (props) => {
 
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-8 col-md-12">
+                            <div className="col-lg-12 col-md-12">
                                 <div className="courses-details-desc">
                                     <Tabs>
                                         <TabList>
@@ -76,21 +145,97 @@ const CourseDetails = (props) => {
                                         </TabList>
 
                                         <TabPanel>
-                                            <div className="courses-overview">
-                                                <h3>Course Description</h3>
-                                                <p style={{whiteSpace: ''}}>{courseDetails.description}</p>
+                                            <div className="row">
+                                                <div className="col-md-7">
+                                                    <div className="courses-overview">
+                                                        <h3>Course Description</h3>
+                                                        <p style={{whiteSpace: ''}}>{courseDetails.description}</p>
 
-                                                <h3>Certification</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                                                    ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-                                                    accumsan lacus vel facilisis.</p>
-                                                <h3>Who this course is for</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                                                    ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-                                                    accumsan lacus vel facilisis.</p>
+                                                        <h3>Certification</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                            do
+                                                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                            Quis
+                                                            ipsum suspendisse ultrices gravida. Risus commodo viverra
+                                                            maecenas
+                                                            accumsan lacus vel facilisis.</p>
+                                                        <h3>Who this course is for</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                            do
+                                                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                            Quis
+                                                            ipsum suspendisse ultrices gravida. Risus commodo viverra
+                                                            maecenas
+                                                            accumsan lacus vel facilisis.</p>
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-5">
+                                                    <ul className="detailsList">
+                                                        <li className="price">
+                                                            <div
+                                                                className="d-flex justify-content-between align-items-center">
+                                                                <span><i className="flaticon-tag"></i> Price</span>
+                                                                <strong> Rs {courseDetails.fee}.00 </strong>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div
+                                                                className="d-flex justify-content-between align-items-center">
+                                                                <span><i
+                                                                    className="flaticon-teacher"></i> Instructor</span>
+                                                                <p style={{textAlign: 'right'}}> {courseDetails.teacher.name} </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div
+                                                                className="d-flex justify-content-between align-items-center">
+                                                                <span><i className="flaticon-time"></i> Duration</span>
+                                                                7 weeks
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div
+                                                                className="d-flex justify-content-between align-items-center">
+                                                                <span><i
+                                                                    className="flaticon-distance-learning"></i>{" "}Lessons</span>
+                                                                25
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div
+                                                                className="d-flex justify-content-between align-items-center">
+                                                                <span><i className="flaticon-web"></i> Enrolled</span>
+                                                                255 students
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div
+                                                                className="d-flex justify-content-between align-items-center">
+                                                                <span><i className="flaticon-lock"></i> Access</span>
+                                                                {courseDetails.courseAccess}
+                                                            </div>
+                                                        </li>
+                                                        {courseDetails.courseEnroll === null ?
+                                                            <li>
+                                                                <a className="default-btn buy-btn"
+                                                                   onClick={buyThisCourse}>
+                                                                    <i className="flaticon-tag"></i> Buy Now{" "}
+                                                                    <span></span>
+                                                                </a>
+                                                            </li> :
+                                                            <li>
+                                                                <a aria-disabled="true" className="default-btn buy-btn">
+                                                                    You Paid for this Course{" "}
+                                                                    <span></span>
+                                                                </a>
+                                                            </li>
+                                                        }
+                                                    </ul>
+                                                </div>
+
                                             </div>
+
+
                                         </TabPanel>
 
                                         <TabPanel>
@@ -100,23 +245,6 @@ const CourseDetails = (props) => {
                                                     courseDetails={courseDetails}
                                                     userType={userType}
                                                 />
-                                                {/*<div>*/}
-                                                {/*<h3>Python Introduction</h3>*/}
-                                                {/*<ul>*/}
-                                                {/*    <li>*/}
-                                                {/*        <a href="#"*/}
-                                                {/*           className="d-flex justify-content-between align-items-center">*/}
-                                                {/*            <span className="courses-name">Python Introduction</span>*/}
-                                                {/*            <div className="courses-meta">*/}
-                                                {/*                <span className="questions">5 questions</span>*/}
-                                                {/*                <span className="duration">01 Hour</span>*/}
-                                                {/*                <span className="status">Preview</span>*/}
-                                                {/*            </div>*/}
-                                                {/*        </a>*/}
-                                                {/*    </li>*/}
-                                                {/*</ul>*/}
-                                                {/*</div>*/}
-
                                             </div>
                                         </TabPanel>
 
@@ -314,9 +442,7 @@ const CourseDetails = (props) => {
                                 </div>
                             </div>
 
-                            <div className="col-lg-4 col-md-12">
-                                <StaticCoursesDetailsSidebar userType={userType} courseDetails={courseDetails}/>
-                            </div>
+
                         </div>
                     </div>
                 </div> : null
@@ -324,6 +450,9 @@ const CourseDetails = (props) => {
 
 
         </React.Fragment>
+        {paymentView ?
+            <PaymentModal showModal={paymentView} closeView={viewModel} courseDetails={courseDetails}/> : null
+        }
     </div>
 
 };

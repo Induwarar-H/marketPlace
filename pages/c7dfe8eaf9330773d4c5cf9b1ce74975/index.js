@@ -9,6 +9,7 @@ import * as constants from "../../const/constants";
 import * as courseService from "../../services/course";
 import * as commonFunc from "@/utils/commonFunc";
 import Cookies from "js-cookie";
+import Router from "next/router";
 
 class PaymentAuthentication extends Component {
 
@@ -43,12 +44,12 @@ class PaymentAuthentication extends Component {
 
     resultPage = (status) => {
         console.log(status);
-
         if (status === "SUCCESS") {
-
-
+            console.log('redirect to main page')
+            Router.push('/myCoursesView')
         if (status === "ERROR") {
-
+            console.log('ERROR');
+            Router.push('/')
         }
         }
     };

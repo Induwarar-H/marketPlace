@@ -22,7 +22,7 @@ const Instance = () => {
                     </div>
                     <div className="col-lg-5 col-md-12">
                         <div className="get-instant-courses-image-style-two">
-                            <img src="/images/setting.png" alt="image" />
+                            <img src="/images/newImages/Blog.png" alt="image" />
                         </div>
                     </div>
                 </div>

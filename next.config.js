@@ -15,4 +15,5 @@ module.exports = withPWA({
 
     cssModules: true,
     distDir: 'build',
+    exportTrailingSlash: true,
 });

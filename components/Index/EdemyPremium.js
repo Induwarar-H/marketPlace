@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const EdemyPremium = (props) => {
-    console.log('GO AT YOUR OWN PACE', props.userType)
+
     return (
         <div>
             <div className="view-all-courses-area-three bg-fff8f8">
@@ -10,7 +10,7 @@ const EdemyPremium = (props) => {
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12">
                             <div className="view-all-courses-image-style-two">
-                                <img src="/images/strategy.png" alt="image"/>
+                                <img src="/images/newImages/Success.png" alt="image"/>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-12">
@@ -48,7 +48,7 @@ const EdemyPremium = (props) => {
                         </div>
                         <div className="col-lg-6 col-md-12">
                             <div className="premium-access-image-style-two">
-                                <img src="/images/security.png" alt="image"/>
+                                <img src="/images/newImages/Podcast%20(1).png" alt="image"/>
                             </div>
                         </div>
                     </div>

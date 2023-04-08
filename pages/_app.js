@@ -14,6 +14,7 @@ import '../components/Authentication/authentication.css'
 import '../pages/style-pages/courseTile.scss'
 import '../components/CourseDetails/selectedCourseView.scss'
 import '../components/Models/payment/PaymentModal.scss'
+import '../components/CourseSections/CourseSessionView/courseSessionView.scss'
 // If you want RTL style, comment out below line
 // import '../styles/rtl.css'
 
@@ -39,7 +40,6 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
     if(Component.getInitialProps){
         pageProps = await Component.getInitialProps(ctx)
     }
-    console.log('test',ctx);
     if(!token){
         console.log(ctx);
         // if a user not logged in then user can't access those pages
@@ -55,7 +55,9 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
         const ifLoggedIn = ctx.pathname === '/authentication'
         || ctx.pathname === '/reset-password'
         if(ifLoggedIn){
+            alert('home page');
             redirectUser(ctx, '/')
+
         }
         try {
             const payload = { headers: { Authorization: token } }

@@ -70,11 +70,14 @@ export const submitHandler = async (obj) => {
         "studentId": user.id,
         "promoId": obj.promoCodeId === "" ? 0 : obj.promoCodeId
     };
-    console.log(data);
-    courseService.initCardPayment(data).then(res => {
-        console.log(res.body)
 
-        Router.push(res.body.payUrl)
+    courseService.initCardPayment(data).then(res => {
+
+        if (res.success) {
+            Router.push(res.body.payUrl)
+        }else {
+            notifyMessage(res.message,2)
+        }
     })
 };
 
